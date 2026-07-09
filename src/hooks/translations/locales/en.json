@@ -1,0 +1,14 @@
+{
+    "language": {
+        "name": "English",
+        "code": "en"
+    },
+    "appName": "Selanim Pos",
+    "menu": {
+        "about": "About Us",
+        "contact": "Contact Us",
+        "documentation": "Documentation",
+        "login": "Login",
+        "language": "Language"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "language": {
+        "name": "Kiswahili",
+        "code": "sw"
+    },
+    "appName": "Selanim Pos",
+    "menu": {
+        "about": "Kuhusu Sisi",
+        "contact": "Wasiliana Nasi",
+        "documentation": "Nyaraka",
+        "login": "Ingia",
+        "language": "Lugha"
+    }
+}
