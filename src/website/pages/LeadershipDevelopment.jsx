@@ -18,53 +18,43 @@ import {
 const trainingAreas = [
   {
     icon: GraduationCap,
-    title: "Leadership Development",
-    text: "Equip current and emerging leaders with practical leadership, strategic thinking, and professional development skills.",
+    title: "Personal Leadership Development",
   },
   {
     icon: BookOpen,
-    title: "Discipleship Education",
-    text: "Strengthen biblical understanding, spiritual growth, servant leadership, and values-based living.",
-  },
-  {
-    icon: Laptop,
-    title: "Digital Literacy",
-    text: "Develop technology skills, digital confidence, and practical competencies for today's connected world.",
-  },
-  {
-    icon: Briefcase,
-    title: "Entrepreneurship",
-    text: "Build business knowledge, innovation, financial literacy, and entrepreneurial leadership.",
-  },
-  {
-    icon: Users,
-    title: "Community Capacity",
-    text: "Strengthen individuals and organizations through community-based learning and capacity-building initiatives.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Personal Development",
-    text: "Promote life skills, critical thinking, personal growth, and lifelong learning opportunities.",
-  },
-  {
-    icon: UserRound,
-    title: "Youth Leadership",
-    text: "Prepare young leaders with confidence, character, mentorship, and practical leadership experience.",
-  },
-  {
-    icon: Mic,
-    title: "Communication Skills",
-    text: "Improve public speaking, communication, collaboration, and presentation abilities.",
-  },
-  {
-    icon: Building2,
-    title: "Organizational Development",
-    text: "Support governance, institutional capacity, strategic planning, and organizational excellence.",
+    title: "Servant Leadership Principles",
   },
   {
     icon: Award,
-    title: "Lifelong Learning",
-    text: "Encourage continuous education, professional development, and knowledge sharing across communities.",
+    title: "Character and Integrity Building",
+  },
+  {
+    icon: Lightbulb,
+    title: "Strategic Planning and Vision Development",
+  },
+  {
+    icon: Users,
+    title: "Team Building and Collaboration",
+  },
+  {
+    icon: Mic,
+    title: "Communication and Public Speaking Skills",
+  },
+  {
+    icon: UserRound,
+    title: "Mentorship and Coaching Programs",
+  },
+  {
+    icon: Building2,
+    title: "Community Transformation Leadership",
+  },
+  {
+    icon: Briefcase,
+    title: "Organizational Leadership and Governance",
+  },
+  {
+    icon: GraduationCap,
+    title: "Emerging Leaders and Youth Leadership Development",
   },
 ];
 
@@ -88,7 +78,7 @@ export default function EducationTrainingSection() {
             <div className="relative h-[520px] lg:h-auto overflow-hidden">
 
               <img
-                src="/education-training.jpg"
+                src="/11.jpeg"
                 alt="Education & Training"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -100,13 +90,11 @@ export default function EducationTrainingSection() {
                 <div className="w-24 h-1 bg-[#C79A2B] rounded-full mb-6"/>
 
                 <h3 className="text-4xl font-black uppercase">
-                  Education & Training
+                 Leadership Development
                 </h3>
 
                 <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Expanding knowledge, building capacity, and preparing
-                  individuals to lead, serve, and transform their
-                  communities.
+                At Rehoboth Discipleship International (RHDI), we believe that effective leadership is the foundation of transformed communities and sustainable development.
                 </p>
 
               </div>
@@ -120,7 +108,7 @@ export default function EducationTrainingSection() {
               <span className="inline-block w-24 h-1 bg-[#C79A2B] rounded-full mb-8"/>
 
               <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                EDUCATION & TRAINING
+               LEADERSHIP DEVELOPMENT
               </h2>
 
               <div className="w-28 h-1 bg-[#C79A2B] mt-6 mb-10"/>
@@ -128,28 +116,11 @@ export default function EducationTrainingSection() {
               <div className="space-y-7 text-[19px] leading-9 text-gray-700">
 
                 <p>
-                  At Rehoboth Discipleship International (RHDI), we
-                  believe education and training are powerful
-                  instruments for empowering individuals, developing
-                  leaders, strengthening communities, and promoting
-                  sustainable transformation across nations.
+                At Rehoboth Discipleship International (RHDI), we believe that effective leadership is the foundation of transformed communities and sustainable development. Our Leadership Development Program is designed to equip individuals, emerging leaders, church leaders, community leaders, and organizational teams with the knowledge, skills, values, and practical tools necessary to lead with integrity, excellence, and servant-hearted commitment.
                 </p>
 
                 <p>
-                  Through workshops, seminars, virtual learning,
-                  mentorship, and capacity-building initiatives, we
-                  provide accessible, innovative, and practical
-                  learning opportunities that equip people with the
-                  knowledge, skills, and competencies needed to thrive
-                  in an increasingly interconnected world.
-                </p>
-
-                <p>
-                  Our commitment is to develop confident leaders,
-                  lifelong learners, and resilient communities by
-                  creating learning environments that inspire
-                  innovation, collaboration, service, and excellence.
-
+                Through seminars, workshops, mentoring, coaching, and virtual training programs, we provide leadership education that strengthens personal growth, strategic thinking, decision-making, communication, team building, and community impact. We seek to raise leaders who are committed to serving others, empowering communities, and creating positive transformation across nations.
                 </p>
 
               </div>
@@ -165,7 +136,7 @@ export default function EducationTrainingSection() {
             <div className="text-center mb-14">
 
               <h3 className="text-4xl font-black uppercase text-white">
-                Areas of Training
+              Our leadership initiatives focus on:
               </h3>
 
               <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]"/>
@@ -231,41 +202,9 @@ export default function EducationTrainingSection() {
 
               <p className="mt-10 text-lg leading-9 text-gray-700">
 
-                Our approach emphasizes practical learning,
-                collaboration, innovation, mentorship, and inclusive
-                participation to ensure individuals and communities
-                are equipped to address today's challenges while
-                embracing future opportunities. Through lifelong
-                learning and continuous capacity building, we seek to
-                cultivate leaders who create sustainable
-                transformation within their families, organizations,
-                and communities.
+              Through our Leadership Development Program, RHDI is committed to equipping leaders who inspire change, strengthen institutions, and contribute to the holistic transformation of individuals, families, communities, and nations.
 
               </p>
-
-            </div>
-
-          </div>
-
-          {/* TAGLINE */}
-
-          <div className="bg-[#F8F8F8] px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <blockquote className="text-4xl font-black leading-tight text-[#061C3F]">
-
-                Educating Minds.
-
-                <span className="block mt-4 text-[#C79A2B]">
-                  Building Capacity.
-                </span>
-
-                <span className="block mt-4">
-                  Transforming Nations.
-                </span>
-
-              </blockquote>
 
             </div>
 

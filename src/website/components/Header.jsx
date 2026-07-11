@@ -257,7 +257,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
-            src="/LOGOO.png"
+            src="/LOGOO.jpeg"
             alt="RHDI"
             className="h-25 w-25 object-contain"
           />

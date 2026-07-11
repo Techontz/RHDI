@@ -5,6 +5,7 @@ import ImpactStats from "./sections/ImpactStats";
 import CoreProgramsSection from "./sections/CoreProgramsSection";
 import AboutImpactSection from "./sections/AboutImpactSection";
 import WelcomeSection from "./sections/WelcomeSection";
+import UpcomingEventsSection from "./sections/UpcomingEventsSection";
 import TechAccess from "./sections/TechAccess";
 import BooksSection from "./sections/BooksSection";
 import MeetDrDanielSection from "./sections/MeetDrDanielSection";
@@ -19,6 +20,7 @@ const Home = () => {
       <Hero />
       <ImpactStats />
       <WelcomeSection />
+      <UpcomingEventsSection />
       <TechAccess />
       <SeminarsSection />
       <BooksSection />

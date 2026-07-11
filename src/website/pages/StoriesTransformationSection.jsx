@@ -57,12 +57,11 @@ export default function StoriesTransformationSection() {
 
             {/* IMAGE */}
 
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
-
+            <div className="relative aspect-square bg-[#061C3F]">
               <img
-                src="/stories-of-transformation.jpg"
+                src="/3333.jpeg"
                 alt="Stories of Transformation"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
               />
 
               <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
@@ -76,8 +75,7 @@ export default function StoriesTransformationSection() {
                 </h3>
 
                 <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Every life transformed is a testimony of hope,
-                  opportunity, and the lasting impact of service.
+                  
                 </p>
 
               </div>

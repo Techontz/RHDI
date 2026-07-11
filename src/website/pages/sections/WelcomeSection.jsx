@@ -37,10 +37,7 @@ const WelcomeSection = () => {
             <span className="font-semibold text-[#001a3d]">
               Rehoboth Discipleship International (RHDI)
             </span>{" "}
-            is a global ministry committed to equipping believers through
-            discipleship, biblical education, leadership development, and
-            community transformation, empowering people to fulfill God's purpose
-            and make lasting impact across nations.
+            Is a faith-based, community-focused international nonprofit organization dedicated to equipping individuals and communities through leadership development, education, training, digital empowerment, and humanitarian service.
           </p>
 
           {/* Button */}

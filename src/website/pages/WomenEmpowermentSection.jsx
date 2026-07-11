@@ -89,7 +89,7 @@ export default function WomenEmpowermentSection() {
             <div className="relative h-[450px] lg:h-auto overflow-hidden">
 
               <img
-                src="/women-empowerment.jpg"
+                src="/7.jpeg"
                 alt="Women's Empowerment"
                 className="absolute inset-0 w-full h-full object-cover"
               />

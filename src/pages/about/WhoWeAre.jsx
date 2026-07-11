@@ -161,7 +161,7 @@ export default function WhoWeAreSection() {
             <div className="bg-red-500 p-10">
 
               <img
-                src="/1.jpeg"
+                src="/12.jpeg"
                 alt="Test"
                 className="w-full h-auto"
               />

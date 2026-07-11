@@ -84,10 +84,10 @@ export default function FamilyYouthDevelopmentSection() {
 
             {/* IMAGE */}
 
-            <div className="relative h-[450px] lg:h-auto overflow-hidden">
+            <div className="relative aspect-square overflow-hidden">
 
               <img
-                src="/family-youth.jpg"
+                src="/family-youth.jpeg"
                 alt="Family & Youth Development"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -113,17 +113,17 @@ export default function FamilyYouthDevelopmentSection() {
 
             {/* CONTENT */}
 
-            <div className="bg-white p-12 lg:p-16">
+            <div className="bg-white p-8 lg:p-10 flex flex-col justify-center">
 
-              <span className="inline-block w-24 h-1 rounded-full bg-[#C79A2B] mb-8" />
+              <span className="inline-block w-20 h-1 rounded-full bg-[#C79A2B] mb-5" />
 
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
+              <h2 className="text-4xl lg:text-5xl font-black uppercase leading-tight text-[#061C3F]">
                 FAMILY & YOUTH DEVELOPMENT
               </h2>
 
-              <div className="w-28 h-1 bg-[#C79A2B] mt-6 mb-10" />
+              <div className="w-24 h-1 bg-[#C79A2B] mt-4 mb-6" />
 
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
+              <div className="space-y-4 text-[17px] leading-7 text-gray-700">
 
                 <p>
                   At Rehoboth Discipleship International (RHDI), we believe
@@ -157,17 +157,17 @@ export default function FamilyYouthDevelopmentSection() {
 
               </div>
 
-              <div className="mt-12">
+              <div className="mt-7">
 
-                <h3 className="text-3xl font-black text-[#061C3F]">
+                <h3 className="text-2xl lg:text-3xl font-black leading-tight text-[#061C3F]">
                   Empowering Families.
                 </h3>
 
-                <h3 className="text-3xl font-black text-[#C79A2B]">
+                <h3 className="text-2xl lg:text-3xl font-black leading-tight text-[#C79A2B]">
                   Inspiring Youth.
                 </h3>
 
-                <h3 className="text-3xl font-black text-[#061C3F]">
+                <h3 className="text-2xl lg:text-3xl font-black leading-tight text-[#061C3F]">
                   Transforming Nations.
                 </h3>
 

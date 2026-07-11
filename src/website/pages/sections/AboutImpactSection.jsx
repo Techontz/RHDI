@@ -87,7 +87,7 @@ const AboutImpactSection = () => {
             <div className="relative overflow-hidden group">
 
               <img
-                src="/impact1.png"
+                src="/111.jpeg"
                 alt=""
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
               />
@@ -99,7 +99,7 @@ const AboutImpactSection = () => {
             <div className="relative overflow-hidden group">
 
               <img
-                src="/impact2.png"
+                src="/222.jpeg"
                 alt=""
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
               />
@@ -115,7 +115,7 @@ const AboutImpactSection = () => {
           <div className="relative overflow-hidden group">
 
             <img
-              src="/impact3.png"
+              src="/33.jpeg"
               alt=""
               className="
                 w-full

@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import HeroBackground from "../../../assets/hero/hero.webp";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen pt-16 overflow-hidden">
 
@@ -81,43 +83,45 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
 
-              <button
-                className="
-                  bg-[#d4a017]
-                  hover:bg-[#b88b11]
-                  text-black
-                  text-sm
-                  font-medium
-                  uppercase
-                  tracking-wide
-                  px-8
-                  py-3
-                  transition-all
-                  duration-300
-                "
-              >
-                Our Programs
-              </button>
+            <button
+              onClick={() => navigate("/programs")}
+              className="
+                bg-[#d4a017]
+                hover:bg-[#b88b11]
+                text-black
+                text-sm
+                font-medium
+                uppercase
+                tracking-wide
+                px-8
+                py-3
+                transition-all
+                duration-300
+              "
+            >
+              Our Programs
+            </button>
 
-              <button
-                className="
-                  border-2
-                  border-[#d4a017]
-                  text-white
-                  text-sm
-                  font-medium
-                  uppercase
-                  tracking-wide
-                  px-8
-                  py-3
-                  hover:bg-[#d4a017]
-                  hover:text-black
-                  transition-all
-                  duration-300
-                "
-              >
-                Partner With Us
-              </button>
+            <button
+              onClick={() => navigate("/partners")}
+              className="
+                border-2
+                border-[#d4a017]
+                text-white
+                text-sm
+                font-medium
+                uppercase
+                tracking-wide
+                px-8
+                py-3
+                hover:bg-[#d4a017]
+                hover:text-black
+                transition-all
+                duration-300
+              "
+            >
+              Partner With Us
+            </button>
 
             </div>
 

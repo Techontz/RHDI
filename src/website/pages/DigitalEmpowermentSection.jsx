@@ -85,7 +85,7 @@ export default function DigitalEmpowermentSection() {
 
             <div className="relative h-[450px] lg:h-auto overflow-hidden">
               <img
-                src="/digital-empowerment.jpg"
+                src="/4.jpeg"
                 alt="Digital Empowerment"
                 className="absolute inset-0 h-full w-full object-cover"
               />

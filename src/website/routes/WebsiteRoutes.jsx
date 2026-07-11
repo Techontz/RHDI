@@ -34,6 +34,7 @@ import StatisticsSection from '../pages/StatisticsSection.jsx';
 import StoriesTransformationSection from '../pages/StoriesTransformationSection.jsx';
 import ProgramUpdatesSection from '../pages/ProgramUpdatesSection.jsx';
 import AnnualReportsSection from '../pages/AnnualReportsSection.jsx';
+import President from "../pages/President.jsx";
 
 import TechnologyVisionSection from '../pages/TechnologyVisionSection.jsx';
 import TechnologyNeedsSection from '../pages/TechnologyNeedsSection.jsx';
@@ -49,6 +50,17 @@ import OrganizationProfileSection from '../pages/OrganizationProfileSection.jsx'
 import AnnualReportDownloadSection from '../pages/AnnualReportDownloadSection.jsx';
 import ImpactReportSection from '../pages/ImpactReportSection.jsx';
 import PoliciesGovernanceSection from '../pages/PoliciesGovernanceSection.jsx';
+
+import HeroBanner from "../pages/conference/HeroBanner";
+import ConferenceOverview from "../pages/conference/ConferenceOverview";
+import WhyThisConference from "../pages/conference/WhyThisConference";
+import AboutBook from "../pages/conference/AboutBook";
+import MeetAuthor from "../pages/conference/MeetAuthor";
+import WhatYouWillLearn from "../pages/conference/WhatYouWillLearn";
+import ConferenceProgram from "../pages/conference/ConferenceProgram";
+import WhoShouldAttend from "../pages/conference/WhoShouldAttend";
+import ConferenceFAQ from "../pages/conference/ConferenceFAQ";
+import ConferenceRegistration from "../pages/conference/ConferenceRegistration";
 
 import ProgramOverview from "../pages/ProgramOverview";
 import VisionMission from "../pages/VisionMission";
@@ -107,6 +119,8 @@ import Cart from "../pages/cart/Cart";
 import OrderSuccess from '../pages/cart/OrderSuccess.jsx';
 
 
+
+
 // Public routes that don't require authentication
 const PublicRoutes = (
   <>
@@ -130,9 +144,24 @@ const PublicRoutes = (
     <Route path="/about/community-care" element={<CommunityCare />} />
     <Route path="/about/countries-we-serve" element={<CountriesWeServe />} />
     <Route path="/about/history" element={<History />} />
+    <Route
+    path="/about/president"
+    element={<President />}
+    />
     <Route path="/about/discipleship" element={<Discipleship />} />
     <Route path="/about/homeless" element={<SeeThoseWhoNeedYourHelp />} />
     <Route path="/about/construction" element={<ConstructionOfWorshipBuildings />} />
+
+    <Route path="/conference/hero" element={<HeroBanner />} />
+    <Route path="/conference/overview" element={<ConferenceOverview />} />
+    <Route path="/conference/why-this-conference" element={<WhyThisConference />} />
+    <Route path="/conference/about-book" element={<AboutBook />} />
+    <Route path="/conference/author" element={<MeetAuthor />} />
+    <Route path="/conference/what-you-will-learn" element={<WhatYouWillLearn />} />
+    <Route path="/conference/program" element={<ConferenceProgram />} />
+    <Route path="/conference/who-should-attend" element={<WhoShouldAttend />} />
+    <Route path="/conference/faq" element={<ConferenceFAQ />} />
+    <Route path="/conference/register" element={<ConferenceRegistration />} />
 
     <Route path="/programs/leadership-development" element={<LeadershipDevelopment />} />
     <Route path="/programs/education-training" element={<EducationTraining />} />

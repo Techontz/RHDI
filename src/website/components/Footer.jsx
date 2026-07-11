@@ -69,7 +69,7 @@ export default function Footer() {
           <div className="pr-8 border-r border-[#C69A2B]/40">
 
           <img
-            src="/LOGOO.png"
+            src="/LOGOO.jpeg"
             alt="RHDI Logo"
             className="h-14 mb-5"
           />

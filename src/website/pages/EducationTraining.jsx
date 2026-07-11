@@ -88,7 +88,7 @@ export default function EducationTrainingSection() {
             <div className="relative h-[520px] lg:h-auto overflow-hidden">
 
               <img
-                src="/education-training.jpg"
+                src="/2.jpeg"
                 alt="Education & Training"
                 className="absolute inset-0 h-full w-full object-cover"
               />

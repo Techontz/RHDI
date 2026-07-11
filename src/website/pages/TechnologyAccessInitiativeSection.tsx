@@ -86,7 +86,7 @@ export default function TBFqTqF17fRvSXDh7U8k5mVFxjqkKrWUXm() {
 
             <div className="relative h-[450px] lg:h-auto overflow-hidden">
               <img
-                src="/technology-access.jpg"
+                src="/5.jpeg"
                 alt="Technology Access Initiative"
                 className="absolute inset-0 h-full w-full object-cover"
               />

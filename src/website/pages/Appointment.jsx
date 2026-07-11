@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, User, Phone, Mail, MessageSquare, MapPin, CheckCircle } from 'lucide-react';
+import {
+  Calendar,
+  Clock,
+  User,
+  Phone,
+  Mail,
+  MessageSquare,
+  MapPin,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
 
 const Appointment = () => {
   // State for form data
@@ -68,8 +78,8 @@ const Appointment = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Black Header - Empty */}
-      <div className="bg-black py-16 md:py-20"></div>
+      {/* Header - Empty */}
+      <div className="bg-[#001A3D] py-16 md:py-20"></div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12 md:py-16">
@@ -82,7 +92,7 @@ const Appointment = () => {
             className="text-center mb-12"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">Appointment</h1>
-            <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-[#C79A2B] mx-auto mb-6"></div>
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
               Booking an appointment has never been easier! Simply select a time that works for you, 
               and we'll make sure you get the service you need when you need it.
@@ -103,33 +113,34 @@ const Appointment = () => {
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Quick Information</h2>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-gray-600">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-[#C79A2B]/10 rounded-full flex items-center justify-center">
                       <Clock className="w-5 h-5 text-green-700" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-800">Working Hours</p>
                       <p className="text-sm">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                      <p className="text-sm">Saturday: 9:00 AM - 4:00 PM</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-3 text-gray-600">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                      <MapPin className="w-5 h-5 text-green-700" />
+                    <div className="w-10 h-10 V rounded-full flex items-center justify-center">
+                      <MapPin className="w-5 h-5 text-[#C79A2B]" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-800">Location</p>
-                      <p className="text-sm">123 Ministry Street, City, State 12345</p>
+                      <p className="text-sm">
+                        378 Lime kiln Rd 428 South Burlington VT 05403
+                      </p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-3 text-gray-600">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-green-700" />
+                    <div className="w-10 h-10 bg-[#C79A2B]/10 rounded-full flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-[#C79A2B]" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-800">Contact</p>
-                      <p className="text-sm">+1 (555) 123-4567</p>
+                      <p className="text-sm">+1 802-355-5243</p>
                       <p className="text-sm">info@rhdi.world</p>
                     </div>
                   </div>
@@ -141,25 +152,25 @@ const Appointment = () => {
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Book With Us?</h2>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 bg-[#C79A2B] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm">✓</span>
                     </div>
                     <p className="text-gray-600">Flexible scheduling options to fit your busy life</p>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 bg-[#C79A2B] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm">✓</span>
                     </div>
                     <p className="text-gray-600">Confirmation via email or phone</p>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 bg-[#C79A2B] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm">✓</span>
                     </div>
                     <p className="text-gray-600">Free consultation for first-time visitors</p>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 bg-[#C79A2B] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm">✓</span>
                     </div>
                     <p className="text-gray-600">Professional and welcoming environment</p>
@@ -204,7 +215,7 @@ const Appointment = () => {
                       value={formData.fullName}
                       onChange={handleChange}
                       placeholder="Enter your full name"
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C79A2B]focus:border-[#C79A2B] transition-all"
                       required
                     />
                   </div>
@@ -221,7 +232,7 @@ const Appointment = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Enter your email"
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C79A2B]focus:border-[#C79A2B] transition-all"
                       required
                     />
                   </div>
@@ -238,7 +249,7 @@ const Appointment = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="Enter your phone number"
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C79A2B]focus:border-[#C79A2B] transition-all"
                       required
                     />
                   </div>
@@ -254,7 +265,7 @@ const Appointment = () => {
                       name="date"
                       value={formData.date}
                       onChange={handleChange}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C79A2B]focus:border-[#C79A2B] transition-all"
                       required
                     />
                   </div>
@@ -269,7 +280,7 @@ const Appointment = () => {
                       name="time"
                       value={formData.time}
                       onChange={handleChange}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all appearance-none bg-white"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C79A2B]focus:border-[#C79A2B] transition-all appearance-none bg-white"
                       required
                     >
                       <option value="">Select a time</option>
@@ -296,34 +307,52 @@ const Appointment = () => {
                       onChange={handleChange}
                       placeholder="Tell us about your needs..."
                       rows="4"
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C79A2B]focus:border-[#C79A2B] transition-all resize-none"
                     ></textarea>
                   </div>
                 </div>
 
-                {/* Submit Button - Clearly Visible Green Button */}
+                {/* Submit Button */}
                 <div className="mt-8">
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`w-full py-4 px-6 bg-gradient-to-r from-green-600 to-green-500 text-white font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 ${
-                      isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
+                    className={`w-full py-4 px-6 bg-gradient-to-r from-[#001A3D] to-[#003A75] hover:from-[#C79A2B] hover:to-[#B58A22] text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 ${
+                      isSubmitting ? "opacity-75 cursor-not-allowed" : ""
                     }`}
                   >
                     {isSubmitting ? (
                       <>
-                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        <svg
+                          className="animate-spin h-5 w-5 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          />
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          />
                         </svg>
+
                         <span>Sending...</span>
                       </>
                     ) : (
                       <>
                         <Calendar className="w-5 h-5" />
                         <span>Book Appointment</span>
+                        <ArrowRight className="w-5 h-5" />
                       </>
                     )}
                   </motion.button>
@@ -350,15 +379,15 @@ const Appointment = () => {
             </p>
             <div className="flex justify-center items-center gap-8 flex-wrap">
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-700">500+</div>
+                <div className="text-3xl font-bold text-[#C79A2B]">500+</div>
                 <div className="text-gray-600">Appointments</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-700">98%</div>
+                <div className="text-3xl font-bold text-[#C79A2B]">98%</div>
                 <div className="text-gray-600">Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-700">24/7</div>
+                <div className="text-3xl font-bold text-[#C79A2B]">24/7</div>
                 <div className="text-gray-600">Support</div>
               </div>
             </div>

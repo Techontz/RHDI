@@ -83,7 +83,7 @@ export default function CommunityOutreachSection() {
 
             <div className="relative h-[450px] lg:h-auto overflow-hidden">
               <img
-                src="/community-outreach.jpg"
+                src="/3.jpeg"
                 alt="Community Outreach"
                 className="absolute inset-0 h-full w-full object-cover"
               />

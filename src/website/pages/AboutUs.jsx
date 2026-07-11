@@ -88,17 +88,17 @@ export default function WhoWeAreSection() {
 
             {/* LEFT */}
 
-            <div className="bg-white p-12 lg:p-16">
+            <div className="bg-white p-8 lg:p-10">
 
               <span className="inline-block h-1 w-24 bg-[#C79A2B] rounded-full mb-8"></span>
 
-              <h2 className="text-5xl lg:text-6xl font-black text-[#061C3F] uppercase">
+              <h2 className="text-4xl lg:text-5xl font-black text-[#061C3F] uppercase">
                 WHO WE ARE
               </h2>
 
-              <div className="w-28 h-1 bg-[#C79A2B] mt-6 mb-8"></div>
+              <div className="w-28 h-1 bg-[#C79A2B] mt-4 mb-5"></div>
 
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
+              <div className="space-y-4 text-[17px] leading-7 text-gray-700">
 
                 <p>
                   Rehoboth Discipleship International (RHDI) is a
@@ -138,9 +138,9 @@ export default function WhoWeAreSection() {
 
               </div>
 
-              <div className="mt-10">
+              <div className="mt-6 space-y-1">
 
-                <h3 className="text-3xl font-black text-[#061C3F]">
+               <h3 className="text-2xl lg:text-3xl font-black text-[#061C3F] leading-tight">
                   Equipping Leaders.
                 </h3>
 
@@ -158,10 +158,10 @@ export default function WhoWeAreSection() {
 
             {/* RIGHT */}
 
-            <div className="relative min-h-[750px]">
+            <div className="relative h-[620px] lg:h-auto">
 
               <img
-                src="/1.jpeg"
+                src="/12.jpeg"
                 alt=""
                 className="absolute inset-0 w-full h-full object-cover"
               />
