@@ -4,40 +4,44 @@ import { useNavigate } from 'react-router-dom';
 import { ChevronRight, X, MapPin, Mail, Phone, Calendar, Globe, Award, BookOpen, Users, Heart } from 'lucide-react';
 
 // Staff Images (tumia placeholder au picha halisi)
-import GeraldImage from "../../assets/staff/gerald-mc.webp";
+import GeraldImage from "../../assets/staff/Ronel Laubscher.jpeg";
 import MwaqasImage from "../../assets/staff/mwaqas.webp";
-import IbrahimImage from "../../assets/staff/ibrahim.webp";
+import IbrahimImage from "../../assets/staff/ibrah.jpeg";
 import DavidImage from "../../assets/staff/david.webp";
-import MaryImage from "../../assets/staff/mary.webp";
-import JenniferImage from "../../assets/staff/jennifer.webp";
-import KabambiImage from "../../assets/staff/kabambi.webp";
-import VivekImage from "../../assets/staff/vivek.webp";
-import AnthonyImage from "../../assets/staff/anthony.webp";
-import DuncanImage from "../../assets/staff/duncan.webp";
-import EmmanuelImage from "../../assets/staff/emmanuel.webp";
+import MaryImage from "../../assets/staff/franklin.jpeg";
+import JenniferImage from "../../assets/staff/jennifer.jpeg";
+import KabambiImage from "../../assets/staff/sudan.jpeg";
+import VivekImage from "../../assets/staff/vive.jpeg";
+import AnthonyImage from "../../assets/staff/YOO.jpeg";
+import DuncanImage from "../../assets/staff/dunc.jpeg";
+import EmmanuelImage from "../../assets/staff/emma.jpeg";
 
 // Staff Data JSON with full details
 const staffData = [
   {
     id: 1,
-    name: "Gerald MC",
-    position: "Director in Canada",
+    name: "Ronel Laubscher",
+    position: "Director in South Africa",
     title: "Director",
-    country: "Canada",
+    country: "South Africa",
     image: GeraldImage,
-    bio: "My name is Gerald, I am 84 years old a Canadian citizen from birth I am an ordained minister with Elim Fellowship of Canada.",
-    email: "gerald.mc@rhdi.world",
-    phone: "+1-123-456-7890",
-    since: "1985",
-    fullBio: `My name is Gerald, I am 84 years old a Canadian citizen from birth I am an ordained minister with Elim Fellowship of Canada and have an Honorary Doctorate Degree from Victorious Christian Bible University and have studied and completed many courses with Zion Christian University. Both are in USA.
+    bio: "My name is Ronel Laubscher",
+    email: "",
+    phone: "",
+    since: "",
+    fullBio: `My name is Ronel Laubscher, and I live in Stilfontein, South Africa, with my husband and our two beautiful daughters. I gave my life to Christ and was baptized in my early twenties, and since then, my walk with the Lord has been marked by continual growth, surrender, and dependence on Him.
 
-I have a ministry online called Golden Rain Fellowship teaching to Ministers in Uganda (we will ordain some ministers in Uganda that have received our teaching) and Bangladesh we have meetings weekly with seventeen pastors and thirty five evangelists. As well we are on Passion TV network each week on Saturday Mornings with teaching.
+One of the greatest lessons I have learned in my relationship with God is that the closer I draw to Him, the more aware I become of my need for His grace. The more I see His holiness and perfection, the more I recognize my own brokenness — and in that place, I have experienced His love, mercy, and transforming power in profound ways.
 
-I am continually active in a local church and involved with a street ministry here in the city I live in Hamilton Ontario Canada. We pray teach and assist whenever and have been in Quebec Canada preaching and teaching as well.
+Throughout my life, I have faced significant mental health challenges, including depression, anxiety, OCD, ADHD, and PTSD. There were seasons when I struggled to understand how any good could come from those experiences. Yet God, in His faithfulness, used even my deepest struggles for His glory. Today, He has opened doors for me to encourage and support other Christians who are navigating mental health challenges while seeking to grow in their faith.
 
-We are engaged in an online Healing and deliverance service weekly. Lastly I was in Bulgaria several years ago ministering in churches there.
+I am a certified Spiritual Coach and hold a Diploma in Psychology. I also lead an organization and blog focused on helping Christians better understand the intersection between faith and psychology. My passion is to help believers find hope, healing, and truth through both biblical wisdom and psychological insight.
 
-Healing and deliverance and salvation and baptism in the Holy Spirit accompanied us as the Lord wills both on line and when we travel.`
+In addition, I serve with Groundwire, a US-based ministry dedicated to sharing the Gospel of Jesus Christ with hurting people around the world. Through this ministry, I have the privilege of speaking with individuals daily who are searching for hope, purpose, and healing in Christ.
+
+One of the most impactful moments in my ministry journey was visiting India in 2018, where I met and ministered to Christians from the “untouchable” communities. Witnessing their faith despite rejection and hardship deeply shaped my understanding of God’s heart for the marginalized and strengthened my passion for serving others with compassion and humility.
+
+Today, I believe God is continuing to open new opportunities for me to share the Gospel and encourage others through my testimony and ministry. I am continually amazed by His faithfulness and excited to see where He leads next. My desire is simply to be available for His purpose and to point others to the hope, healing, and freedom found in Jesus Christ.`
   },
   {
     id: 2,
@@ -116,24 +120,21 @@ My wife and I have a vision to train local pastors/leaders in India and Nepal th
   },
   {
     id: 5,
-    name: "Mary N Kasongo",
+    name: "Franklin Ewane & Ebontane Charles Sone",
     position: "APOSTLE",
     title: "Apostle",
-    country: "Australia",
+    country: "Cameroon",
     image: MaryImage,
-    bio: "Got saved in 1985 in Pentecostal Assemblies of God. Founder & President of IDM INC Australia.",
-    email: "mary.kasongo@rhdi.world",
-    phone: "+61-123-456-789",
-    since: "1998",
-    fullBio: `Got saved in 1985 in Pentecostal Assemblies of God Upper Room church, baptized on 02/03/1986 in Kafue Zambia. I received my calling whilst in secondary school.
-
-In 1998 went into ministry in Malawi and Mozambique.
-
-In July 2015 became Founder & President of IDM INC Australia.
-
-In 2020 attended Theological Bible College MMBC – Bachelor's degree in Apostolic Ministry.
-
-I am Director of RDI.world in Australia Country.`
+    bio: "About 30 Years Ministry experience, after Bible school in 1991i was posted to my own Town, worked with the Free Methodist World Missions for more than 10Years and then in 2004 started Light And life Mission Cameroon Fill My Cup Ministries International USA, Mentorship International Ministries",
+    email: "lightandlifemissionchurch@gmail.com",
+    phone: "+237676709303 & +237641266070",
+    since: "",
+    fullBio: `Light And life Mission Cameroon carry out different activities like Church planting, Discipleship,Training, Orphanage,Vocational training,Ministry to Refugees, Bible distribution project., Youths Ministry, Women's Ministry.
+Through Church planting, we have been able to plant Churches in different areas of Country and also in Nigeria.
+Discipleship is helping us to Mentor so many Children also carrying out Discipleship Training.
+Training has given us the opportunity to have a Bible school that has trained so many Pastors and Leaders.
+The Orphanage that God told me to open before Crisis began in the two English speaking Regions of Cameroon is being a blessing to Orphans, Abandoned and Refugees.
+Our Vocational training Center is to train Orphans, Abandoned and Refugees in Computer Software and hardware, Hair dressing, Sowing, English and French has impacted many lives in our Community.`
   },
   {
     id: 6,
@@ -158,18 +159,52 @@ My husband and I are blessed with 3 children, ages 7, 4, and 16. My husband is 3
   },
   {
     id: 7,
-    name: "Dr. Kabambi",
-    position: "REV",
-    title: "Rev. Dr.",
-    country: "DR Congo",
+    name: "Rev. Deng James Bol Jok",
+    position: "President & CEO",
+    title: "Reverend",
+    country: "South Sudan",
     image: KabambiImage,
-    bio: "I'm called REV. DR. KABAMBI EMMANUEL. I have been serving in ministry for over 15 years.",
-    email: "kabambi.emmanuel@rhdi.world",
-    phone: "+243-123-456-789",
-    since: "2008",
-    fullBio: `I'm called REV. DR. KABAMBI EMMANUEL. Born on January 31, 1983. I have been serving in ministry for over 15 years, with a passion for teaching, discipleship, and pastoral care.
-
-My ministry has taken me across the Democratic Republic of Congo and beyond, training church leaders and establishing discipleship programs. I believe that the church grows strong when believers are grounded in the Word and equipped for every good work.`
+  
+    bio: "Rev. Deng James Bol Jok is the Founder, President, and CEO of Christians Initiative for Development Aid (CIDA), a South Sudan-based Christian organization dedicated to discipleship, humanitarian outreach, church planting, and community development.",
+  
+    email: "deng.james@rhdi.world",
+    phone: "+211-123-456-789",
+    since: "2013",
+  
+    fullBio: `Rev. Deng James Bol Jok is the Founder, President, and Chief Executive Officer of Christians Initiative for Development Aid (CIDA), a registered national Christian organization headquartered in Aweil, Northern Bahr el Ghazal State, South Sudan.
+  
+  Through CIDA, he has established four schools that provide education and care for orphaned and vulnerable children:
+  
+  • Light Academy Primary School
+  • Christ the King Orphanage Primary School
+  • Emmanuel Orphanage Secondary School
+  • River of Life Christian Primary School
+  
+  These institutions serve children from the five counties of Northern Bahr el Ghazal, providing education, hope, and Christian values.
+  
+  Since beginning his ministry in 2013, Rev. Deng has focused on evangelism, discipleship, church planting, biblical teaching, leadership development, healing ministry, youth and children's ministry, women's ministry, counseling, humanitarian outreach, and community transformation.
+  
+  His ministry also serves vulnerable communities through projects that include:
+  
+  • Orphan and widow support
+  • Disability assistance
+  • Agricultural development
+  • Healthcare initiatives
+  • Bible distribution
+  • Pastors' training
+  • Village Savings and Loans groups
+  • Water and sanitation projects
+  • Borehole drilling and solar water systems
+  • Emergency response and flood resilience
+  • Community development programs
+  
+  CIDA currently serves more than 4,500 church members and has planted ten churches throughout Northern Bahr el Ghazal. The ministry is committed to expanding the Gospel throughout South Sudan and beyond.
+  
+  Rev. Deng has a special burden for orphans, widows, people living with disabilities, vulnerable children, and underserved communities. His vision is to see lives transformed spiritually, socially, and economically through the power of Jesus Christ.
+  
+  One of his greatest desires is to reach remote villages with the Gospel through evangelistic outreach and Jesus Film presentations, believing that thousands of communities have never had the opportunity to hear the Good News.
+  
+  Rev. Deng desires to partner with Rehoboth Discipleship International (RDI) because he believes strong biblical discipleship is essential for raising faithful Christian leaders and restoring sound biblical teaching within the Church. He looks forward to collaborating in leadership development, pastor training, community transformation, humanitarian assistance, and discipleship initiatives that will strengthen churches and improve the lives of people throughout South Sudan.`
   },
   {
     id: 8,
@@ -204,20 +239,16 @@ In the nearby future, I desire to establish 150 churches in Nepalganj and its su
   },
   {
     id: 9,
-    name: "Anthony Kinalwa",
+    name: "Lawson Limao ",
     position: "Pastor",
     title: "Pastor",
-    country: "Uganda",
+    country: "Zambia",
     image: AnthonyImage,
-    bio: "Pastor Anthony Kinalwa got saved in Christian Ministries Uganda in the year 2000.",
-    email: "anthony.kinalwa@rhdi.world",
-    phone: "+256-123-456-789",
-    since: "2000",
-    fullBio: `Pastor Anthony Kinalwa got saved in Christian Ministries Uganda in the year 2000, went through Ministry training till 2006 when I fully became a full time Pastor in that same Ministry.
-
-In 2010 I was released to go out serve the Lord in Nations. But my main call is to empower the youth and young adults around the world. We have committed to discipling them. We are reaching many for the glory of God.
-
-By the grace of God, I have been in Kenya, Nigeria, Sweden and USA. I pastored Kengera Christian Youth Ministries and currently I am the lead Pastor of Destiny Passion Worship Centre Uganda in East Africa.`
+    bio: "I heard about RDI last year through LinkedIn. I was inspired by what the Lord is doing through RDI,",
+    email: "",
+    phone: "",
+    since: "",
+    fullBio: `I heard about RDI last year through LinkedIn. I was inspired by what the Lord is doing through RDI, as discipling believers is my passion. The experience I have gained from the two meetings has been enriching, as I have learned that discipleship is generational. We see this modeled in the relationship between Paul and Timothy. This has opened my eyes to understand that the church should prioritize discipleship in their congregations for generations to come`
   },
   {
     id: 10,
@@ -466,7 +497,7 @@ const OurStaff = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Header Section */}
-      <div className="relative bg-gradient-to-r from-blue-900 to-purple-900 py-20 overflow-hidden">
+      <div className="relative bg-[#001a3d] py-20 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full filter blur-3xl"></div>
@@ -481,7 +512,7 @@ const OurStaff = () => {
           >
             MEET OUR STAFF
           </motion.h1>
-          <motion.p 
+          <motion.p  
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}

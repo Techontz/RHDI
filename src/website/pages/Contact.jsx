@@ -136,19 +136,38 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Header Section */}
-      <div className="bg-black py-16 md:py-20">
-        <div className="container mx-auto px-4">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white text-4xl md:text-5xl lg:text-6xl font-bold text-center"
-          >
-            Contact Us
-          </motion.h1>
-        </div>
+      {/* Premium Header Section */}
+      <section className="relative overflow-hidden bg-[#061C3F] py-20 md:py-24">
+
+      {/* Background Decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-24 right-0 h-72 w-72 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
       </div>
+
+      <div className="relative container mx-auto px-4">
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/10 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+            Contact
+          </div>
+
+          <h1 className="mt-8 text-5xl font-bold leading-tight text-white md:text-7xl">
+            Contact Us
+          </h1>
+
+          <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
+
+        </motion.div>
+
+      </div>
+      </section>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12 md:py-16">
@@ -171,7 +190,7 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
               className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${
                 submitStatus.success 
-                  ? 'bg-green-100 text-green-700 border border-green-200' 
+                  ? 'bg-[#061C3F]/10 text-[#061C3F] border-[#061C3F]/20' 
                   : 'bg-red-100 text-red-700 border border-red-200'
               }`}
             >
@@ -209,7 +228,7 @@ const Contact = () => {
                       value={formData.fullName}
                       onChange={handleInputChange}
                       placeholder="Enter your full name"
-                      className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all ${
+                      className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#061C3F] focus:border-transparent transition-all ${
                         errors.fullName ? 'border-red-500' : 'border-gray-200'
                       }`}
                     />
@@ -232,7 +251,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="Enter your email address"
-                      className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all ${
+                      className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#061C3F] focus:border-transparent transition-all ${
                         errors.email ? 'border-red-500' : 'border-gray-200'
                       }`}
                     />
@@ -253,7 +272,7 @@ const Contact = () => {
                       value={formData.mobilePhone}
                       onChange={handleInputChange}
                       placeholder="Enter your mobile phone number"
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#061C3F] focus:border-transparent transition-all"
                     />
                   </div>
                 </motion.div>
@@ -271,7 +290,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="Type your message here..."
                       rows="5"
-                      className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none ${
+                      className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#061C3F] focus:border-transparent transition-all resize-none ${
                         errors.message ? 'border-red-500' : 'border-gray-200'
                       }`}
                     />
@@ -289,7 +308,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full bg-green-700 hover:bg-green-800 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 text-lg ${
+                    className={`w-full bg-[#061C3F] hover:bg-[#082a5a] text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 text-lg ${
                       isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
                     }`}
                   >
@@ -319,8 +338,8 @@ const Contact = () => {
               {/* Head Office Address */}
               <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                    <Building className="w-5 h-5 text-green-700" />
+                  <div className="w-10 h-10 bg-[#061C3F]/10 rounded-full flex items-center justify-center">
+                    <Building className="w-5 h-5 text-[#061C3F]" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800">Head Office Address:</h3>
                 </div>
@@ -366,7 +385,7 @@ const Contact = () => {
               {/* Additional Info Card */}
               <div className="bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl p-6 border border-green-200">
                 <div className="flex items-center gap-3 mb-3">
-                  <Globe className="w-6 h-6 text-green-700" />
+                  <Globe className="w-6 h-6 text-[#061C3F]" />
                   <h3 className="text-lg font-bold text-gray-800">Office Hours</h3>
                 </div>
                 <p className="text-gray-600 mb-2">Monday - Friday: 9:00 AM - 6:00 PM</p>

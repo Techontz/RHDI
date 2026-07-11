@@ -17,7 +17,7 @@ import AboutUs from '../pages/AboutUs.jsx';
 import MissionStatement from '../pages/MissionStatement.jsx';
 import LeadershipGovernance from '../pages/LeadershipGovernance.jsx';
 import CommunityCare from '../pages/CommunityCare.jsx';
-import CoreValues from '../pages/CoreValues.jsx';
+import CoreValues from '../pages/CoreValues.jsx'; 
 
 import LeadershipDevelopment from '../pages/LeadershipDevelopment.jsx';
 import CommunityOutreachSection from '../pages/CommunityOutreachSection.jsx';
@@ -127,7 +127,7 @@ const PublicRoutes = (
     <Route path="/" element={<Home />} />
     <Route path="/donate-to-support" element={<Donate />} />
     <Route path="/watch-live" element={<WatchLive />} />
-    <Route path="/impreza-church/meet-our-staff" element={<OurStaff />} />
+    <Route path="/about/our-staff" element={<OurStaff />} />
     <Route path="/chidrens-edit" element={<ChidrensMinistry />} />
     <Route path="/womens-ministry" element={<WomensMinistry />} />
 

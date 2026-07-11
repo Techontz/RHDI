@@ -1,293 +1,160 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
+  Sparkles,
   ShieldCheck,
   HeartHandshake,
-  Eye,
-  Scale,
-  BookOpen,
+  Compass,
+  GraduationCap,
   Users,
-  Lightbulb,
-  Target,
-  HandHeart,
-  Crown,
+  Briefcase,
   ArrowRight,
 } from "lucide-react";
 
-const principles = [
-  {
-    icon: HeartHandshake,
-    title: "Servant Leadership",
-    text: "Leadership begins with serving others, empowering people, and creating opportunities for growth and transformation.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Integrity",
-    text: "Honesty, transparency, ethical conduct, and accountability are the foundation of trustworthy leadership.",
-  },
-  {
-    icon: Eye,
-    title: "Vision & Purpose",
-    text: "Effective leaders inspire hope, pursue meaningful goals, and mobilize people toward lasting impact.",
-  },
-  {
-    icon: BookOpen,
-    title: "Continuous Learning",
-    text: "Great leaders remain teachable, value wisdom, and continually grow in knowledge and character.",
-  },
-  {
-    icon: Scale,
-    title: "Responsibility",
-    text: "Leadership requires faithful stewardship of people, opportunities, resources, and influence.",
-  },
-  {
-    icon: Users,
-    title: "Empowering Others",
-    text: "True leaders mentor, encourage, and equip others to realize their potential and succeed.",
-  },
-  {
-    icon: HandHeart,
-    title: "Humility",
-    text: "Humility enables leaders to listen, collaborate, value others, and lead with compassion.",
-  },
-  {
-    icon: Target,
-    title: "Transformation",
-    text: "Leadership should create lasting positive change that strengthens individuals, communities, and nations.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovation",
-    text: "Visionary leaders embrace creativity and adapt to new challenges while remaining faithful to core values.",
-  },
-  {
-    icon: Crown,
-    title: "Character",
-    text: "Leadership is ultimately measured by character, faithfulness, compassion, and the legacy left in others.",
-  },
-];
-
-const scriptures = [
-  "Proverbs 11:14",
-  "Matthew 20:26–28",
-  "Luke 12:48",
-  "Romans 12:8",
-  "Philippians 2:3–5",
-  "1 Timothy 4:12",
-  "1 Peter 5:2–3",
-];
-
-export default function LeadershipPrinciplesSection() {
+export default function LeadershipPrinciples() {
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1700px] mx-auto px-6">
+    <main className="relative overflow-hidden bg-white">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#061C3F]/5 blur-3xl" />
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .7 }}
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
-        >
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
 
-          {/* HERO */}
+          {/* Hero */}
 
-          <div className="grid lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/5 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+              <Sparkles className="h-4 w-4" />
+              Faith & Values
+            </div>
 
-            {/* IMAGE */}
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-[#061C3F] md:text-7xl">
+              Leadership
+              <span className="block text-[#C79A2B]">
+                Principles
+              </span>
+            </h1>
 
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
+            <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
+          </motion.div>
 
-              <img
-                src="/leadership-principles.jpg"
-                alt="Leadership Principles"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+          {/* Main Article */}
 
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
+          <motion.article
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-24 max-w-5xl rounded-[36px] border border-gray-100 bg-white p-10 shadow-sm md:p-16"
+          >
+            <div className="space-y-10 text-lg leading-10 text-gray-600">
 
-              <div className="absolute bottom-12 left-10 max-w-md text-white">
-
-                <div className="w-24 h-1 rounded-full bg-[#C79A2B] mb-6" />
-
-                <h3 className="text-4xl font-black uppercase">
-                  Leadership Principles
-                </h3>
-
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Developing leaders who serve with integrity, lead with
-                  vision, and transform communities through faithful
-                  stewardship.
+              <div className="flex gap-6">
+                <Users className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  At Rehoboth Discipleship International (RHDI), we believe that leadership is both a privilege and a responsibility. Leadership is not defined by position, status, or authority alone; it is demonstrated through character, service, integrity, and the positive influence that one brings to the lives of others. We are committed to developing leaders who lead with purpose, serve with humility, and work diligently to create meaningful and sustainable transformation within their communities and nations.
                 </p>
+              </div>
 
+              <div className="flex gap-6">
+                <HeartHandshake className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  Our leadership philosophy is founded upon the principle of servant leadership. We believe that effective leaders place the needs of others above personal interests and use their influence to empower, encourage, and develop people. Leadership is expressed through a willingness to listen, support, mentor, and create opportunities that enable others to grow and succeed. True leaders seek not merely to direct people but to inspire, equip, and serve them.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <ShieldCheck className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  We affirm that integrity is the foundation of trustworthy leadership. Leaders must demonstrate honesty, transparency, ethical conduct, and consistency between their values and actions. Integrity builds credibility, strengthens relationships, and fosters confidence among individuals, communities, and partners. We therefore encourage leaders to make decisions that reflect accountability, fairness, and a commitment to the common good.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <Compass className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  We believe that leadership requires vision and purpose. Effective leaders possess the ability to identify opportunities, address challenges, and mobilize people toward a shared mission. Visionary leadership inspires hope, promotes innovation, and creates environments where individuals can discover their potential and contribute meaningfully to society. Leaders should therefore be intentional, forward-thinking, and committed to long-term impact and sustainable development.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <GraduationCap className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  We further believe that leadership demands humility and continuous learning. Great leaders recognize the importance of personal growth, value the contributions of others, and remain open to learning, adaptation, and improvement. Humility enables leaders to cultivate meaningful relationships, embrace collaboration, and lead with wisdom and compassion in diverse and changing environments.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <Briefcase className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  At RHDI, we believe that leadership is inseparable from stewardship and responsibility. Leaders are entrusted with people, resources, opportunities, and influence, all of which must be managed faithfully and responsibly. Responsible leadership requires accountability, sound decision-making, and a commitment to using resources effectively for the benefit of communities and future generations.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <Users className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  We also affirm that leadership should produce transformation. Effective leadership empowers individuals, strengthens institutions, promotes justice and human dignity, and contributes to the well-being and flourishing of society. Leaders should seek to create environments where people can thrive spiritually, socially, educationally, and economically. The measure of leadership is not personal success alone but the positive and lasting impact created in the lives of others.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <HeartHandshake className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  At Rehoboth Discipleship International, we are committed to raising leaders of character, competence, and compassion—leaders who embody faith, integrity, excellence, accountability, and servant-heartedness. Through leadership development, mentorship, education, and community engagement, we seek to equip leaders who are prepared to address contemporary challenges and inspire transformation across generations and nations.
+                </p>
               </div>
 
             </div>
+          </motion.article>
 
-            {/* CONTENT */}
+          {/* Closing */}
 
-            <div className="bg-white p-12 lg:p-16">
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-32 overflow-hidden rounded-[36px] bg-[#061C3F] p-10 text-white md:p-16"
+          >
+            <div className="max-w-5xl">
 
-              <span className="inline-block w-24 h-1 rounded-full bg-[#C79A2B] mb-8" />
-
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                LEADERSHIP PRINCIPLES
-              </h2>
-
-              <div className="w-28 h-1 bg-[#C79A2B] mt-6 mb-10" />
-
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
-
-                <p>
-                  At Rehoboth Discipleship International (RHDI), we
-                  believe leadership is both a privilege and a
-                  responsibility. Leadership is demonstrated through
-                  character, service, integrity, and the positive
-                  influence that transforms the lives of others.
-                </p>
-
-                <p>
-                  Our leadership philosophy is founded upon servant
-                  leadership. We believe effective leaders place the
-                  needs of others above personal interests, using their
-                  influence to mentor, empower, and develop people for
-                  meaningful service.
-                </p>
-
-                <p>
-                  We affirm that integrity, vision, humility, continuous
-                  learning, and responsible stewardship are essential
-                  qualities of transformational leadership. These
-                  principles guide leaders in making ethical decisions,
-                  inspiring collaboration, and pursuing sustainable
-                  impact.
-                </p>
-
-                <p>
-                  Through leadership development, mentorship,
-                  education, and community engagement, RHDI equips
-                  leaders of character, competence, and compassion who
-                  are prepared to strengthen communities and influence
-                  nations for generations to come.
-                </p>
-
+              <div className="inline-flex items-center gap-2 font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                <ArrowRight className="h-5 w-5" />
+                Our Leadership Commitment
               </div>
 
-              <div className="mt-12">
-
-                <h3 className="text-3xl font-black text-[#061C3F]">
-                  Serve With Integrity.
-                </h3>
-
-                <h3 className="text-3xl font-black text-[#C79A2B]">
-                  Lead With Vision.
-                </h3>
-
-                <h3 className="text-3xl font-black text-[#061C3F]">
-                  Empower Others.
-                </h3>
-
-                <h3 className="text-3xl font-black text-[#C79A2B]">
-                  Transform Communities.
-                </h3>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* PRINCIPLES */}
-
-          <div className="bg-[#061C3F] px-8 py-16">
-
-            <div className="text-center mb-14">
-
-              <h3 className="text-4xl font-black uppercase text-white">
-                Leadership Principles
-              </h3>
-
-              <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]" />
-
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-5">
-
-              {principles.map((item, index) => {
-                const Icon = item.icon;
-
-                return (
-                  <motion.div
-                    key={index}
-                    whileHover={{ y: -8 }}
-                    className="rounded-2xl border border-[#C79A2B]/20 bg-white/5 p-7 backdrop-blur-sm"
-                  >
-
-                    <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#C79A2B] mb-6">
-                      <Icon size={30} className="text-white" />
-                    </div>
-
-                    <h4 className="text-xl font-bold uppercase text-white">
-                      {item.title}
-                    </h4>
-
-                    <p className="mt-4 leading-7 text-gray-300">
-                      {item.text}
-                    </p>
-
-                    <ArrowRight className="mt-6 text-[#C79A2B]" />
-
-                  </motion.div>
-                );
-              })}
-
-            </div>
-
-          </div>
-
-          {/* SCRIPTURE */}
-
-          <div className="bg-[#F8F8F8] px-8 py-20">
-
-            <div className="max-w-6xl mx-auto text-center">
-
-              <h3 className="text-4xl font-black uppercase text-[#061C3F]">
-                Biblical References
-              </h3>
-
-              <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]" />
-
-              <div className="mt-12 flex flex-wrap justify-center gap-4">
-
-                {scriptures.map((verse) => (
-                  <div
-                    key={verse}
-                    className="rounded-full border border-[#C79A2B] bg-white px-8 py-4 text-lg font-bold text-[#061C3F]"
-                  >
-                    {verse}
-                  </div>
-                ))}
-
-              </div>
-
-              <p className="max-w-5xl mx-auto mt-12 text-lg leading-9 text-gray-700">
-                Our leadership principles are rooted in Scripture and
-                guide every aspect of our ministry. We are committed to
-                raising leaders who demonstrate integrity, humility,
-                servant-heartedness, responsible stewardship, and a
-                lifelong commitment to developing others. Through these
-                biblical principles, we seek to inspire leaders who
-                create lasting transformation in families, communities,
+              <p className="mt-10 text-3xl font-semibold leading-[1.7]">
+                To develop leaders who serve with integrity, lead with vision,
+                steward resources responsibly, empower others intentionally,
+                and pursue transformation that positively impacts communities
                 and nations.
               </p>
 
+              <div className="my-10 h-px bg-white/10" />
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                  Biblical References
+                </h3>
+
+                <p className="mt-5 text-xl leading-9 text-gray-200">
+                  Proverbs 11:14; Matthew 20:26–28; Luke 12:48;
+                  Romans 12:8; Philippians 2:3–5; 1 Timothy 4:12;
+                  1 Peter 5:2–3.
+                </p>
+              </div>
+
             </div>
+          </motion.section>
 
-          </div>
-
-        </motion.div>
-
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }

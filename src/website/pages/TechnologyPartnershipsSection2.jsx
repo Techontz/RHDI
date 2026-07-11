@@ -1,272 +1,159 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
+  Sparkles,
   Laptop,
-  Monitor,
-  Cloud,
-  Wifi,
   Cpu,
-  GraduationCap,
+  Wifi,
   ShieldCheck,
-  Globe,
-  Quote,
   ArrowRight,
+  HeartHandshake,
 } from "lucide-react";
 
-const partnershipAreas = [
-  {
-    icon: Monitor,
-    title: "Technology Equipment",
-    text: "Support communities through donations of computers, laptops, tablets, monitors, projectors, and other digital devices that expand access to education and technology.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & Software",
-    text: "Provide cloud infrastructure, software licenses, productivity tools, cybersecurity solutions, and digital platforms that strengthen learning and collaboration.",
-  },
-  {
-    icon: Wifi,
-    title: "Connectivity",
-    text: "Improve internet access, networking infrastructure, and communication technologies that enable communities to participate in the digital economy.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Digital Learning",
-    text: "Collaborate in delivering online education, virtual training, learning management systems, and digital literacy initiatives.",
-  },
-  {
-    icon: Cpu,
-    title: "Innovation",
-    text: "Develop innovative technology solutions that enhance leadership development, education, community engagement, and sustainable development.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Capacity Building",
-    text: "Support technical training, mentorship, digital skills development, and technology adoption that empower individuals and organizations.",
-  },
-];
-
-export default function TechnologyPartnershipsSection2() {
+export default function TechnologyPartnerships() {
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1700px] mx-auto px-6">
+    <main className="relative overflow-hidden bg-white">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#061C3F]/5 blur-3xl" />
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
-        >
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
 
-          {/* HERO */}
+          {/* Hero */}
 
-          <div className="grid lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/5 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+              <Sparkles className="h-4 w-4" />
+              Technology Partnerships
+            </div>
 
-            {/* IMAGE */}
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-[#061C3F] md:text-7xl">
+              Advancing Through
+              <span className="block text-[#C79A2B]">
+                Technology Partnerships
+              </span>
+            </h1>
 
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
+            <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
 
-              <img
-                src="/technology-partnerships.jpg"
-                alt="Technology Partnerships"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+            <p className="mx-auto mt-10 max-w-3xl text-lg leading-9 text-gray-600">
+              Rehoboth Discipleship International (RHDI) believes that technology
+              is a powerful catalyst for education, leadership development,
+              communication, and community transformation. Through our
+              Technology Partnerships program, we collaborate with technology
+              companies, foundations, innovators, and strategic partners to
+              expand access to digital resources and create opportunities that
+              empower individuals and communities across nations.
+            </p>
+          </motion.div>
 
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
+          {/* Section 1 */}
 
-              <div className="absolute bottom-12 left-10 max-w-md text-white">
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-24 rounded-[36px] border border-gray-100 bg-white p-10 shadow-sm md:p-14"
+          >
+            <Laptop className="h-14 w-14 text-[#C79A2B]" />
 
-                <div className="w-24 h-1 rounded-full bg-[#C79A2B] mb-6" />
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              Our technology initiatives focus on increasing access to
+              computers, laptops, tablets, software solutions, internet
+              connectivity, digital learning platforms, virtual training tools,
+              and communication technologies that strengthen education,
+              leadership development, and community engagement. We also work to
+              build digital capacity by providing training and support that
+              enable communities to effectively use technology for sustainable
+              development.
+            </p>
+          </motion.section>
 
-                <h3 className="text-4xl font-black uppercase">
-                  Technology Partnerships
-                </h3>
+          {/* Section 2 */}
 
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Collaborating with technology leaders to expand digital
-                  inclusion, strengthen education, and transform
-                  communities through innovation.
-                </p>
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 rounded-[36px] border border-gray-100 bg-white p-10 shadow-sm md:p-14"
+          >
+            <Cpu className="h-14 w-14 text-[#C79A2B]" />
 
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              Technology partners play a critical role in helping RHDI bridge
+              the digital divide, expand learning opportunities, improve program
+              delivery, and create innovative solutions that reach underserved
+              communities. Through equipment donations, software support,
+              digital infrastructure investments, capacity-building initiatives,
+              and strategic collaboration, our partners help create lasting and
+              measurable impact.
+            </p>
+          </motion.section>
+
+          {/* Section 3 */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 rounded-[36px] border border-gray-100 bg-white p-10 shadow-sm md:p-14"
+          >
+            <ShieldCheck className="h-14 w-14 text-[#C79A2B]" />
+
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              At RHDI, we are committed to responsible stewardship,
+              transparency, accountability, and sustainable implementation of
+              technology initiatives that empower people and strengthen
+              communities for generations to come.
+            </p>
+          </motion.section>
+
+          {/* CTA */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-32 overflow-hidden rounded-[36px] bg-[#061C3F] p-10 text-white md:p-16"
+          >
+            <div className="max-w-5xl">
+              <div className="inline-flex items-center gap-2 font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                <ArrowRight className="h-5 w-5" />
+                Technology Partnerships
               </div>
 
-            </div>
-
-            {/* CONTENT */}
-
-            <div className="bg-white p-12 lg:p-16">
-
-              <span className="inline-block h-1 w-24 rounded-full bg-[#C79A2B] mb-8" />
-
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                TECHNOLOGY PARTNERSHIPS
-              </h2>
-
-              <div className="mt-6 mb-10 h-1 w-28 bg-[#C79A2B]" />
-
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
-
-                <p>
-                  Rehoboth Discipleship International (RHDI) believes
-                  technology is a powerful catalyst for education,
-                  leadership development, communication, and community
-                  transformation. Through our Technology Partnerships
-                  Program, we collaborate with technology companies,
-                  innovators, foundations, and strategic partners to
-                  expand digital opportunities across nations.
-                </p>
-
-                <p>
-                  Together we work to increase access to computers,
-                  software, internet connectivity, digital learning
-                  platforms, virtual training tools, and communication
-                  technologies that strengthen education, leadership,
-                  and community engagement.
-                </p>
-
-                <p>
-                  Through innovation, technical expertise, and shared
-                  vision, our technology partners help bridge the
-                  digital divide and create sustainable solutions that
-                  empower underserved communities for generations to
-                  come.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* PARTNERSHIP AREAS */}
-
-          <div className="bg-[#061C3F] px-8 py-16">
-
-            <div className="text-center mb-14">
-
-              <h3 className="text-4xl font-black uppercase text-white">
-                Technology Partnership Opportunities
-              </h3>
-
-              <div className="mx-auto mt-5 h-1 w-28 bg-[#C79A2B]" />
-
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-              {partnershipAreas.map((item) => {
-
-                const Icon = item.icon;
-
-                return (
-
-                  <motion.div
-                    key={item.title}
-                    whileHover={{ y: -8 }}
-                    className="rounded-2xl border border-[#C79A2B]/20 bg-white/5 p-8 backdrop-blur-sm"
-                  >
-
-                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#C79A2B]">
-
-                      <Icon size={30} className="text-white" />
-
-                    </div>
-
-                    <h4 className="text-xl font-bold uppercase text-white">
-                      {item.title}
-                    </h4>
-
-                    <p className="mt-4 leading-7 text-gray-300">
-                      {item.text}
-                    </p>
-
-                    <ArrowRight className="mt-6 text-[#C79A2B]" />
-
-                  </motion.div>
-
-                );
-
-              })}
-
-            </div>
-
-          </div>
-
-          {/* WHY PARTNER */}
-
-          <div className="bg-white px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <Laptop
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
-
-              <h3 className="mt-8 text-4xl font-black uppercase text-[#061C3F]">
-                Why Technology Partners Choose RHDI
-              </h3>
-
-              <div className="mx-auto mt-5 h-1 w-28 bg-[#C79A2B]" />
-
-              <p className="mt-10 text-lg leading-9 text-gray-700">
-
-                Technology partners help create meaningful and measurable
-                impact by expanding access to digital tools, improving
-                educational opportunities, strengthening leadership
-                development, enhancing program delivery, and supporting
-                innovation that transforms communities. Through
-                responsible stewardship, transparency, and long-term
-                collaboration, every technology investment contributes
-                to sustainable development and digital inclusion.
-
+              <p className="mt-8 text-2xl font-semibold leading-10">
+                Together, we can leverage technology to equip leaders, empower
+                communities, and transform nations through innovation and
+                digital inclusion.
               </p>
 
-            </div>
+              <div className="my-10 h-px bg-white/10" />
 
-          </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <HeartHandshake className="mb-5 h-10 w-10 text-[#C79A2B]" />
 
-          {/* CLOSING */}
-
-          <div className="bg-[#F8F8F8] px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <Quote
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
-
-              <blockquote className="mt-10 text-2xl italic font-semibold leading-10 text-[#061C3F]">
-
-                "Together, we can leverage technology to equip
-                leaders, empower communities, and transform nations
-                through innovation, digital inclusion, and sustainable
-                collaboration."
-
-              </blockquote>
-
-              <div className="mt-14">
-
-                <h3 className="text-3xl font-black text-[#061C3F]">
+                <h3 className="text-3xl font-bold">
                   Rehoboth Discipleship International (RHDI)
                 </h3>
 
-                <h4 className="mt-4 text-2xl font-bold text-[#C79A2B]">
-                  Equipping Leaders. Empowering Communities.
-                  Transforming Nations.
-                </h4>
-
+                <p className="mt-5 text-xl leading-9 text-gray-200">
+                  Equipping Leaders. Empowering Communities. Transforming
+                  Nations.
+                </p>
               </div>
-
             </div>
+          </motion.section>
 
-          </div>
-
-        </motion.div>
-
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }

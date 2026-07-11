@@ -18,6 +18,10 @@ const menuItems = [
       { title: "Mission & Vision", path: "/about/mission-vision" },
       { title: "Our History", path: "/about/history" },
       { title: "Leadership & Governance", path: "/about/leadership-governance" },
+  
+      // ADD THIS
+      { title: "Our Staff", path: "/about/our-staff" },
+  
       { title: "Core Values", path: "/about/core-values" },
       { title: "Community Care & Humanitarian Support", path: "/about/community-care" },
       { title: "Countries We Serve", path: "/about/countries-we-serve" },
@@ -244,7 +248,7 @@ export default function Header() {
 
     return () =>
       document.removeEventListener(
-        "mousedown",
+        "mousedown", 
         handleClickOutside
       );
   }, []);

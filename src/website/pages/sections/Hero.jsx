@@ -78,53 +78,6 @@ const Hero = () => {
               </div>
 
             </div>
-
-            {/* Buttons */}
-
-            <div className="flex flex-col sm:flex-row gap-4 mt-6">
-
-            <button
-              onClick={() => navigate("/programs")}
-              className="
-                bg-[#d4a017]
-                hover:bg-[#b88b11]
-                text-black
-                text-sm
-                font-medium
-                uppercase
-                tracking-wide
-                px-8
-                py-3
-                transition-all
-                duration-300
-              "
-            >
-              Our Programs
-            </button>
-
-            <button
-              onClick={() => navigate("/partners")}
-              className="
-                border-2
-                border-[#d4a017]
-                text-white
-                text-sm
-                font-medium
-                uppercase
-                tracking-wide
-                px-8
-                py-3
-                hover:bg-[#d4a017]
-                hover:text-black
-                transition-all
-                duration-300
-              "
-            >
-              Partner With Us
-            </button>
-
-            </div>
-
           </div>
 
         </div>

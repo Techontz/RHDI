@@ -1,262 +1,189 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
+  Sparkles,
   Handshake,
+  Globe,
   Users,
+  HeartHandshake,
   GraduationCap,
   Laptop,
-  HandHeart,
-  Globe,
   ArrowRight,
-  Quote,
 } from "lucide-react";
 
-const partnershipBenefits = [
-  {
-    icon: Users,
-    title: "Develop Leaders",
-    text: "Support leadership development programs that equip current and emerging leaders with character, vision, and practical skills.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Expand Education",
-    text: "Help provide education, training, mentorship, and lifelong learning opportunities that empower individuals to thrive.",
-  },
-  {
-    icon: Laptop,
-    title: "Increase Technology Access",
-    text: "Contribute to digital inclusion by expanding access to technology, online learning, and communication resources.",
-  },
-  {
-    icon: HandHeart,
-    title: "Strengthen Communities",
-    text: "Support humanitarian service, community outreach, and sustainable development initiatives that improve lives.",
-  },
-  {
-    icon: Globe,
-    title: "Create Global Impact",
-    text: "Join a growing international network committed to empowering communities and transforming nations.",
-  },
-  {
-    icon: Handshake,
-    title: "Build Lasting Partnerships",
-    text: "Collaborate with RHDI through meaningful partnerships that produce measurable and sustainable impact.",
-  },
-];
+export default function BecomeAPartner() {
+  const partnershipAreas = [
+    {
+      icon: GraduationCap,
+      title: "Leadership Development",
+      description:
+        "Supporting leadership training, mentorship, and capacity-building initiatives that equip current and emerging leaders.",
+    },
+    {
+      icon: Laptop,
+      title: "Digital Empowerment",
+      description:
+        "Expanding access to technology, digital learning opportunities, and innovation that strengthen communities.",
+    },
+    {
+      icon: HeartHandshake,
+      title: "Community Transformation",
+      description:
+        "Helping provide educational resources, humanitarian support, and outreach initiatives that inspire sustainable transformation.",
+    },
+  ];
 
-export default function BecomePartnerSection() {
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1700px] mx-auto px-6">
+    <main className="relative overflow-hidden bg-white">
+      {/* Background Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#061C3F]/5 blur-3xl" />
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .7 }}
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
-        >
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
 
-          {/* HERO */}
+          {/* Hero */}
 
-          <div className="grid lg:grid-cols-2">
-
-            {/* IMAGE */}
-
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
-
-              <img
-                src="/become-a-partner.jpg"
-                alt="Become A Partner"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
-
-              <div className="absolute bottom-12 left-10 max-w-md text-white">
-
-                <div className="w-24 h-1 rounded-full bg-[#C79A2B] mb-6" />
-
-                <h3 className="text-4xl font-black uppercase">
-                  Become A Partner
-                </h3>
-
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Together we can equip leaders, empower communities,
-                  and transform nations through faith, collaboration,
-                  and purposeful action.
-                </p>
-
-              </div>
-
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/5 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+              <Sparkles className="h-4 w-4" />
+              Become A Partner
             </div>
 
-            {/* CONTENT */}
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-[#061C3F] md:text-7xl">
+              Join Our
+              <span className="block text-[#C79A2B]">
+                Global Mission
+              </span>
+            </h1>
 
-            <div className="bg-white p-12 lg:p-16">
+            <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
 
-              <span className="inline-block h-1 w-24 rounded-full bg-[#C79A2B] mb-8" />
+            <p className="mx-auto mt-10 max-w-3xl text-lg leading-9 text-gray-600">
+              At Rehoboth Discipleship International (RHDI), we believe that
+              meaningful transformation happens through strategic partnerships.
+              We invite individuals, churches, businesses, foundations, and
+              organizations to join us in equipping leaders, empowering
+              communities, and transforming nations through discipleship,
+              education, leadership development, digital empowerment, and
+              humanitarian initiatives.
+            </p>
+          </motion.div>
 
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                BECOME A PARTNER
+          {/* Partnership Vision */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-24 max-w-5xl text-center"
+          >
+            <Handshake className="mx-auto h-14 w-14 text-[#C79A2B]" />
+
+            <h2 className="mt-6 text-3xl font-bold text-[#061C3F]">
+              Why Partner With RHDI?
+            </h2>
+
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              By becoming a partner, you become part of a global movement
+              committed to creating lasting impact and expanding opportunities
+              for individuals and communities across different nations. Your
+              partnership helps provide training, technology access,
+              educational resources, leadership development programs, and
+              community outreach initiatives that inspire hope and sustainable
+              transformation.
+            </p>
+          </motion.section>
+
+          {/* Focus Areas */}
+
+          <section className="mt-28">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-[#061C3F]">
+                Partnership Impact
               </h2>
 
-              <div className="mt-6 mb-10 h-1 w-28 bg-[#C79A2B]" />
-
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
-
-                <p>
-                  At Rehoboth Discipleship International (RHDI), we
-                  believe meaningful transformation happens through
-                  strategic partnerships. We invite individuals,
-                  churches, businesses, foundations, educational
-                  institutions, and organizations to join us in
-                  equipping leaders, empowering communities, and
-                  transforming nations.
-                </p>
-
-                <p>
-                  By becoming a partner, you become part of a global
-                  movement committed to expanding opportunities
-                  through discipleship, education, leadership
-                  development, digital empowerment, humanitarian
-                  service, and community transformation.
-                </p>
-
-                <p>
-                  Together we can strengthen communities, develop
-                  future leaders, promote innovation, and create
-                  sustainable opportunities that empower people to
-                  discover and fulfill their God-given potential.
-                </p>
-
-              </div>
-
+              <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-[#C79A2B]" />
             </div>
 
-          </div>
-
-          {/* WHY PARTNER */}
-
-          <div className="bg-[#061C3F] px-8 py-16">
-
-            <div className="text-center mb-14">
-
-              <h3 className="text-4xl font-black uppercase text-white">
-                Why Partner With RHDI?
-              </h3>
-
-              <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]" />
-
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-              {partnershipBenefits.map((item) => {
+            <div className="mt-16 grid gap-8 md:grid-cols-3">
+              {partnershipAreas.map((item, index) => {
                 const Icon = item.icon;
 
                 return (
                   <motion.div
-                    key={item.title}
-                    whileHover={{ y: -8 }}
-                    className="rounded-2xl border border-[#C79A2B]/20 bg-white/5 p-8 backdrop-blur-sm"
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.08 }}
+                    viewport={{ once: true }}
+                    className="group rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:-translate-y-2 hover:border-[#C79A2B]/30 hover:shadow-xl"
                   >
-
-                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#C79A2B]">
-                      <Icon size={30} className="text-white" />
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#061C3F] text-white transition-all group-hover:bg-[#C79A2B]">
+                      <Icon className="h-8 w-8" />
                     </div>
 
-                    <h4 className="text-xl font-bold uppercase text-white">
+                    <h3 className="mt-8 text-2xl font-bold text-[#061C3F]">
                       {item.title}
-                    </h4>
+                    </h3>
 
-                    <p className="mt-4 leading-7 text-gray-300">
-                      {item.text}
+                    <p className="mt-5 text-lg leading-8 text-gray-600">
+                      {item.description}
                     </p>
-
-                    <ArrowRight className="mt-6 text-[#C79A2B]" />
-
                   </motion.div>
                 );
               })}
-
             </div>
+          </section>
 
-          </div>
+          {/* Call to Action */}
 
-          {/* CALL TO ACTION */}
-
-          <div className="bg-white px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <Handshake
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
-
-              <h3 className="mt-8 text-4xl font-black uppercase text-[#061C3F]">
-                Join Our Global Mission
-              </h3>
-
-              <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]" />
-
-              <p className="mt-10 text-lg leading-9 text-gray-700">
-
-                Your partnership helps provide leadership training,
-                educational resources, technology access, mentorship,
-                humanitarian support, and community development
-                initiatives that inspire hope and create lasting
-                transformation. Together, we can build stronger
-                communities and expand opportunities for generations
-                to come.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          {/* PARTNERSHIP STATEMENT */}
-
-          <div className="bg-[#F8F8F8] px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <Quote
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
-
-              <blockquote className="mt-10 text-2xl italic font-semibold leading-10 text-[#061C3F]">
-
-                "Partner with us today and become part of a shared
-                vision to transform lives, strengthen communities,
-                and impact generations through faith, education,
-                leadership, and compassionate service."
-
-              </blockquote>
-
-              <div className="mt-12">
-
-                <h3 className="text-3xl font-black text-[#061C3F]">
-                  RHDI.world
-                </h3>
-
-                <h4 className="mt-4 text-2xl font-bold text-[#C79A2B]">
-                  Equipping Leaders. Empowering Communities.
-                  Transforming Nations.
-                </h4>
-
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-32 overflow-hidden rounded-[36px] bg-[#061C3F] p-10 text-white md:p-16"
+          >
+            <div className="max-w-5xl">
+              <div className="inline-flex items-center gap-2 font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                <ArrowRight className="h-5 w-5" />
+                Become A Partner
               </div>
 
+              <p className="mt-8 text-lg leading-9 text-gray-200">
+                Together, we can build stronger communities, develop future
+                leaders, promote innovation, and create opportunities that
+                empower people to reach their God-given potential.
+              </p>
+
+              <div className="my-10 h-px bg-white/10" />
+
+              <p className="text-2xl font-semibold leading-10 text-white">
+                Partner with us today and become part of a shared vision to
+                transform lives and impact generations.
+              </p>
+
+              <div className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8">
+                <Globe className="mb-5 h-10 w-10 text-[#C79A2B]" />
+
+                <h3 className="text-3xl font-bold">RHDI.world</h3>
+
+                <p className="mt-5 text-xl leading-9 text-gray-200">
+                  Equipping Leaders. Empowering Communities. Transforming
+                  Nations.
+                </p>
+              </div>
             </div>
+          </motion.section>
 
-          </div>
-
-        </motion.div>
-
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }

@@ -1,300 +1,160 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
+  Sparkles,
   BookOpen,
   Cross,
-  Heart,
+  HeartHandshake,
   ShieldCheck,
-  HandHeart,
-  Users,
   GraduationCap,
-  Globe,
-  Scale,
-  Lightbulb,
+  Users,
   ArrowRight,
 } from "lucide-react";
 
-const principles = [
-  {
-    icon: BookOpen,
-    title: "The Authority of Scripture",
-    text: "We believe God's Word provides timeless truth and guidance for faith, leadership, stewardship, and community transformation.",
-  },
-  {
-    icon: Heart,
-    title: "Human Dignity",
-    text: "Every person is created in the image of God with inherent worth, purpose, and unique gifts to serve society.",
-  },
-  {
-    icon: HandHeart,
-    title: "Faith in Action",
-    text: "Authentic faith is demonstrated through compassion, justice, service, reconciliation, and practical love.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Servant Leadership",
-    text: "Leadership is a sacred responsibility exercised with humility, integrity, accountability, and excellence.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Wisdom & Learning",
-    text: "Education, lifelong learning, mentorship, and responsible stewardship of knowledge enable people to flourish.",
-  },
-  {
-    icon: Users,
-    title: "Community",
-    text: "Healthy communities are built through love, collaboration, mutual respect, shared responsibility, and unity.",
-  },
-  {
-    icon: Globe,
-    title: "Transformation",
-    text: "God transforms individuals, strengthens families, renews communities, and impacts nations through faithful service.",
-  },
-  {
-    icon: Scale,
-    title: "Justice",
-    text: "We seek to uphold righteousness, fairness, dignity, and compassion in every aspect of our work.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Responsible Stewardship",
-    text: "We are called to wisely use our gifts, resources, technology, and opportunities for God's glory and human flourishing.",
-  },
-  {
-    icon: Cross,
-    title: "Hope in Christ",
-    text: "Our confidence rests in Christ, whose love inspires lasting transformation for individuals and communities.",
-  },
-];
-
-const scriptures = [
-  "Genesis 1:27",
-  "Micah 6:8",
-  "Matthew 5:14–16",
-  "Matthew 22:37–39",
-  "John 13:34–35",
-  "Romans 12:9–21",
-  "Ephesians 2:10",
-  "Colossians 3:23–24",
-  "1 Peter 4:10",
-];
-
-export default function BiblicalFoundationsSection() {
+export default function BiblicalFoundations() {
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1700px] mx-auto px-6">
+    <main className="relative overflow-hidden bg-white">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#061C3F]/5 blur-3xl" />
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .7 }}
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
-        >
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
 
-          {/* HERO */}
+          {/* Hero */}
 
-          <div className="grid lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/5 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+              <Sparkles className="h-4 w-4" />
+              Faith & Values
+            </div>
 
-            {/* IMAGE */}
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-[#061C3F] md:text-7xl">
+              Biblical
+              <span className="block text-[#C79A2B]">
+                Foundations
+              </span>
+            </h1>
 
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
+            <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
+          </motion.div>
 
-              <img
-                src="/biblical-foundations.jpg"
-                alt="Biblical Foundations"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+          {/* Main Article */}
 
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
+          <motion.article
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-24 max-w-5xl rounded-[36px] border border-gray-100 bg-white p-10 shadow-sm md:p-16"
+          >
+            <div className="space-y-10 text-lg leading-10 text-gray-600">
 
-              <div className="absolute bottom-12 left-10 max-w-md text-white">
-
-                <div className="w-24 h-1 rounded-full bg-[#C79A2B] mb-6" />
-
-                <h3 className="text-4xl font-black uppercase">
-                  Biblical Foundations
-                </h3>
-
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  God's Word is the moral and spiritual foundation that
-                  shapes our mission, values, leadership, and service.
+              <div className="flex gap-6">
+                <BookOpen className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  At Rehoboth Discipleship International (RHDI), our mission, values, and programs are rooted in biblical principles that affirm the dignity of every person and the responsibility of believers to serve others with integrity, compassion, and excellence. We believe that Scripture provides timeless truths and guiding principles for personal transformation, leadership development, community engagement, and responsible stewardship.
                 </p>
+              </div>
 
+              <div className="flex gap-6">
+                <Users className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  Our biblical foundation begins with the belief that every human being possesses inherent worth and purpose. We affirm that people are created with unique gifts, talents, and the capacity to contribute meaningfully to their families, communities, and society. This conviction shapes our commitment to empowering individuals through discipleship, education, leadership development, and community transformation initiatives.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <HeartHandshake className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  We believe that faith should produce practical and visible expressions of love, service, justice, and compassion. Genuine faith inspires individuals to care for others, respond to human needs, promote peace and reconciliation, and work toward the well-being and flourishing of communities. Our commitment to humanitarian service and community engagement is therefore an expression of our biblical responsibility to serve humanity with dignity and respect.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <ShieldCheck className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  We affirm that leadership is a sacred responsibility that should be exercised with humility, integrity, accountability, and servant-heartedness. Biblical leadership seeks the welfare of others, demonstrates ethical conduct, and uses influence to empower and develop people rather than pursuing personal gain or recognition. Through our leadership initiatives, we seek to raise leaders who exemplify character, wisdom, responsibility, and a commitment to transformational service.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <GraduationCap className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  We believe that knowledge and learning are essential components of human development and effective stewardship. Therefore, we are committed to promoting education, lifelong learning, mentorship, and the responsible use of knowledge and technology for the benefit of individuals and communities. We encourage people to cultivate wisdom, pursue excellence, and apply their gifts and abilities in ways that contribute positively to society.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <Users className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  We further believe that communities flourish when relationships are characterized by love, mutual respect, collaboration, justice, and shared responsibility. Our biblical foundations encourage unity and partnership among individuals, organizations, and communities in addressing societal challenges and creating sustainable solutions that improve the quality of life for present and future generations.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <Cross className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  At RHDI, our biblical foundations also affirm hope and transformation. We believe that lives can be renewed, leaders can be developed, communities can be strengthened, and nations can experience positive transformation when people are equipped, empowered, and inspired to live according to values that promote human dignity, responsible leadership, and service to others.
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <BookOpen className="mt-2 h-10 w-10 shrink-0 text-[#C79A2B]" />
+                <p>
+                  These biblical foundations provide the moral and spiritual framework that guides our vision, shapes our organizational culture, informs our decision-making, and inspires our commitment to serving communities across nations. They remind us that true transformation begins with transformed individuals, extends to families and communities, and ultimately contributes to the renewal and flourishing of society.
+                </p>
               </div>
 
             </div>
+          </motion.article>
 
-            {/* CONTENT */}
+          {/* Closing */}
 
-            <div className="bg-white p-12 lg:p-16">
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-32 overflow-hidden rounded-[36px] bg-[#061C3F] p-10 text-white md:p-16"
+          >
+            <div className="max-w-5xl">
 
-              <span className="inline-block w-24 h-1 rounded-full bg-[#C79A2B] mb-8" />
-
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                BIBLICAL FOUNDATIONS
-              </h2>
-
-              <div className="w-28 h-1 bg-[#C79A2B] mt-6 mb-10" />
-
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
-
-                <p>
-                  At Rehoboth Discipleship International (RHDI), our
-                  mission, values, and programs are rooted in biblical
-                  principles that affirm the dignity of every person
-                  and the responsibility of believers to serve others
-                  with integrity, compassion, and excellence.
-                </p>
-
-                <p>
-                  We believe Scripture provides timeless truth for
-                  personal transformation, servant leadership,
-                  education, stewardship, and community engagement.
-                  These principles shape our vision and guide every
-                  initiative we undertake.
-                </p>
-
-                <p>
-                  Our biblical foundations inspire us to promote
-                  justice, strengthen communities, cultivate wisdom,
-                  empower leaders, and encourage responsible
-                  stewardship of resources, knowledge, and technology.
-                </p>
-
-                <p>
-                  We believe true transformation begins with
-                  transformed individuals, extends to families and
-                  communities, and ultimately contributes to the
-                  renewal and flourishing of nations.
-                </p>
-
+              <div className="inline-flex items-center gap-2 font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                <ArrowRight className="h-5 w-5" />
+                Our Biblical Foundation
               </div>
 
-              <div className="mt-12">
-
-                <h3 className="text-3xl font-black text-[#061C3F]">
-                  Faith In Action.
-                </h3>
-
-                <h3 className="text-3xl font-black text-[#C79A2B]">
-                  Servant Leadership.
-                </h3>
-
-                <h3 className="text-3xl font-black text-[#061C3F]">
-                  Responsible Stewardship.
-                </h3>
-
-                <h3 className="text-3xl font-black text-[#C79A2B]">
-                  Community Transformation.
-                </h3>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* PRINCIPLES */}
-
-          <div className="bg-[#061C3F] px-8 py-16">
-
-            <div className="text-center mb-14">
-
-              <h3 className="text-4xl font-black uppercase text-white">
-                Biblical Principles
-              </h3>
-
-              <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]" />
-
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-5">
-
-              {principles.map((item, index) => {
-
-                const Icon = item.icon;
-
-                return (
-
-                  <motion.div
-                    key={index}
-                    whileHover={{ y: -8 }}
-                    className="rounded-2xl border border-[#C79A2B]/20 bg-white/5 p-7 backdrop-blur-sm"
-                  >
-
-                    <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#C79A2B] mb-6">
-
-                      <Icon size={30} className="text-white" />
-
-                    </div>
-
-                    <h4 className="text-xl font-bold uppercase text-white">
-                      {item.title}
-                    </h4>
-
-                    <p className="mt-4 leading-7 text-gray-300">
-                      {item.text}
-                    </p>
-
-                    <ArrowRight className="mt-6 text-[#C79A2B]" />
-
-                  </motion.div>
-
-                );
-
-              })}
-
-            </div>
-
-          </div>
-
-          {/* SCRIPTURE */}
-
-          <div className="bg-[#F8F8F8] px-8 py-20">
-
-            <div className="max-w-6xl mx-auto text-center">
-
-              <h3 className="text-4xl font-black uppercase text-[#061C3F]">
-                Biblical References
-              </h3>
-
-              <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]" />
-
-              <div className="mt-12 flex flex-wrap justify-center gap-4">
-
-                {scriptures.map((verse) => (
-
-                  <div
-                    key={verse}
-                    className="rounded-full border border-[#C79A2B] bg-white px-8 py-4 text-lg font-bold text-[#061C3F]"
-                  >
-                    {verse}
-                  </div>
-
-                ))}
-
-              </div>
-
-              <p className="max-w-5xl mx-auto mt-12 text-lg leading-9 text-gray-700">
-                These biblical foundations provide the moral and
-                spiritual framework that guides our vision, shapes our
-                organizational culture, informs our decision-making,
-                and inspires our commitment to serving communities
-                across nations. They remind us that genuine
-                transformation begins with faith expressed through
-                compassionate service, ethical leadership, and faithful
-                stewardship for the glory of God and the flourishing of
-                humanity.
+              <p className="mt-10 text-3xl font-semibold leading-[1.7]">
+                Our Biblical Foundation is expressed through faith in action,
+                servant leadership, responsible stewardship, compassionate
+                service, and an unwavering commitment to human dignity and
+                community transformation.
               </p>
 
+              <div className="my-10 h-px bg-white/10" />
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                  Biblical References
+                </h3>
+
+                <p className="mt-5 text-xl leading-9 text-gray-200">
+                  Genesis 1:27; Micah 6:8; Matthew 5:14–16; Matthew 22:37–39;
+                  John 13:34–35; Romans 12:9–21; Ephesians 2:10;
+                  Colossians 3:23–24; 1 Peter 4:10.
+                </p>
+              </div>
+
             </div>
+          </motion.section>
 
-          </div>
-
-        </motion.div>
-
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }

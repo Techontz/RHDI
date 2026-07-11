@@ -1,230 +1,101 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
-  BarChart3,
-  TrendingUp,
-  HeartHandshake,
-  Users,
-  Globe,
-  Target,
+  Sparkles,
+  FileText,
   Download,
   ArrowRight,
 } from "lucide-react";
 
-const impactHighlights = [
-  {
-    icon: TrendingUp,
-    title: "Measurable Outcomes",
-    text: "Explore the measurable results achieved through leadership development, education, humanitarian service, digital empowerment, and community engagement initiatives.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Stories of Transformation",
-    text: "Read inspiring examples of how individuals, families, leaders, and communities have experienced positive and lasting change.",
-  },
-  {
-    icon: Users,
-    title: "Communities Reached",
-    text: "See how our programs continue to strengthen communities and expand opportunities across multiple countries.",
-  },
-  {
-    icon: Globe,
-    title: "Strategic Impact",
-    text: "Understand how partnerships, innovation, and sustainable development initiatives contribute to long-term community transformation.",
-  },
-];
-
-export default function ImpactReportSection() {
+export default function ImpactReport() {
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1700px] mx-auto px-6">
-
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .7 }}
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
-        >
-
-          {/* HERO */}
-
-          <div className="grid lg:grid-cols-2">
-
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
-
-              <img
-                src="/impact-report.jpg"
-                alt="Impact Report"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
-
-              <div className="absolute bottom-12 left-10 max-w-md text-white">
-
-                <div className="w-24 h-1 rounded-full bg-[#C79A2B] mb-6" />
-
-                <h3 className="text-4xl font-black uppercase">
-                  Impact Report
-                </h3>
-
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Measuring transformation through evidence, outcomes,
-                  and the lives changed across the communities we serve.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div className="bg-white p-12 lg:p-16">
-
-              <span className="inline-block h-1 w-24 rounded-full bg-[#C79A2B] mb-8" />
-
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                IMPACT REPORT
-              </h2>
-
-              <div className="w-28 h-1 bg-[#C79A2B] mt-6 mb-10" />
-
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
-
-                <p>
-                  Our Impact Report showcases the measurable outcomes,
-                  stories of transformation, and lasting change
-                  generated through the work of Rehoboth Discipleship
-                  International (RHDI). It demonstrates how our
-                  programs continue to equip leaders, empower
-                  communities, and create sustainable impact across
-                  the nations we serve.
-                </p>
-
-                <p>
-                  The report reflects our commitment to
-                  accountability, transparency, and evidence-based
-                  impact by presenting program achievements,
-                  beneficiary reach, strategic progress, and
-                  measurable outcomes that illustrate the difference
-                  made through collaborative action.
-                </p>
-
-                <p>
-                  Whether you are a partner, donor, volunteer,
-                  supporter, or stakeholder, the Impact Report
-                  provides meaningful insight into the lives
-                  transformed, communities strengthened, and future
-                  opportunities for sustainable development.
-
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* HIGHLIGHTS */}
-
-          <div className="bg-[#061C3F] px-8 py-16">
-
-            <div className="text-center mb-14">
-
-              <h3 className="text-4xl font-black uppercase text-white">
-                What's Inside The Report
-              </h3>
-
-              <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]" />
-
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-
-              {impactHighlights.map((item) => {
-
-                const Icon = item.icon;
-
-                return (
-
-                  <motion.div
-                    key={item.title}
-                    whileHover={{ y: -8 }}
-                    className="rounded-2xl border border-[#C79A2B]/20 bg-white/5 p-8"
-                  >
-
-                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#C79A2B]">
-
-                      <Icon
-                        size={30}
-                        className="text-white"
-                      />
-
-                    </div>
-
-                    <h4 className="text-xl font-bold uppercase text-white">
-                      {item.title}
-                    </h4>
-
-                    <p className="mt-4 leading-7 text-gray-300">
-                      {item.text}
-                    </p>
-
-                    <ArrowRight className="mt-6 text-[#C79A2B]" />
-
-                  </motion.div>
-
-                );
-
-              })}
-
-            </div>
-
-          </div>
-
-          {/* PDF DOWNLOAD */}
-
-          <div className="bg-white px-8 py-24">
-
-            <div className="max-w-4xl mx-auto">
-
-              <div className="rounded-3xl border border-[#C79A2B] bg-[#061C3F] p-12 text-center shadow-2xl">
-
-                <BarChart3
-                  size={80}
-                  className="mx-auto text-[#C79A2B]"
-                />
-
-                <h3 className="mt-8 text-4xl font-black text-white">
-                  Download Impact Report
-                </h3>
-
-                <p className="mt-6 text-lg leading-8 text-gray-300">
-
-                  Download the complete Impact Report to explore our
-                  measurable outcomes, stories of transformation,
-                  beneficiary reach, program achievements, and the
-                  lasting impact created through our partnerships and
-                  community initiatives.
-
-                </p>
-
-                <a
-                  href="/impact-report.pdf"
-                  download
-                  className="mt-10 inline-flex items-center gap-3 rounded-xl bg-[#C79A2B] px-8 py-4 text-lg font-bold text-white transition hover:opacity-90"
-                >
-                  <Download size={22} />
-                  Download PDF
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
-        </motion.div>
-
+    <main className="relative overflow-hidden bg-white">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#061C3F]/5 blur-3xl" />
       </div>
-    </section>
+
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+
+          {/* Hero */}
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/5 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+              <Sparkles className="h-4 w-4" />
+              Impact Report
+            </div>
+
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-[#061C3F] md:text-7xl">
+              Impact
+              <span className="block text-[#C79A2B]">
+                Report
+              </span>
+            </h1>
+
+            <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
+
+            <p className="mx-auto mt-10 max-w-3xl text-lg leading-9 text-gray-600">
+              Our Impact Report showcases the measurable outcomes, stories of
+              transformation, and lasting change generated through the work of
+              Rehoboth Discipleship International (RHDI). It highlights how our
+              programs and initiatives are equipping leaders, empowering
+              communities, and creating sustainable impact across the nations we
+              serve.
+            </p>
+
+            <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-gray-600">
+              This report demonstrates our commitment to accountability,
+              transparency, and evidence-based impact by presenting key
+              achievements, beneficiary reach, program outcomes, and strategic
+              progress toward our mission.
+            </p>
+
+            <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-gray-600">
+              Download our Impact Report to discover the lives transformed,
+              communities strengthened, and milestones achieved through our
+              collective efforts and partnerships.
+            </p>
+          </motion.div>
+
+          {/* PDF Download */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-24 max-w-4xl overflow-hidden rounded-[36px] bg-[#061C3F] p-12 text-center text-white shadow-2xl"
+          >
+            <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#C79A2B]/20">
+              <FileText className="h-12 w-12 text-[#C79A2B]" />
+            </div>
+
+            <h2 className="mt-8 text-4xl font-bold">
+              Impact Report (PDF)
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-9 text-gray-300">
+              PDF Download: 📄 Impact Report (PDF)
+            </p>
+
+            <a
+              href="/impact-report.pdf"
+              download
+              className="mt-10 inline-flex items-center gap-3 rounded-xl bg-[#C79A2B] px-8 py-4 text-lg font-bold text-white transition hover:opacity-90"
+            >
+              <Download className="h-5 w-5" />
+              Download Impact Report (PDF)
+              <ArrowRight className="h-5 w-5" />
+            </a>
+          </motion.section>
+
+        </div>
+      </section>
+    </main>
   );
 }

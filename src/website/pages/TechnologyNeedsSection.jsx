@@ -1,288 +1,233 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
+  Sparkles,
   Monitor,
   Laptop,
-  Boxes,
+  Tablet,
+  Printer,
+  Presentation,
+  Camera,
+  Video,
+  Layers,
+  Shield,
+  Cloud,
+  Wifi,
+  Server,
+  BatteryCharging,
+  Wrench,
   GraduationCap,
-  Target,
+  Users,
+  BookOpen,
   ArrowRight,
 } from "lucide-react";
 
-const categories = [
-  {
-    icon: Monitor,
-    title: "Technology Equipment",
-    items: [
-      "Desktop Computers",
-      "Laptop Computers",
-      "Tablets & iPads",
-      "Computer Monitors",
-      "Printers & Scanners",
-      "Projectors & Presentation Equipment",
-      "Webcams & Digital Cameras",
-      "Audio & Video Conferencing Equipment",
-    ],
-  },
-  {
-    icon: Laptop,
-    title: "Software & Digital Resources",
-    items: [
-      "Operating Systems",
-      "Productivity Software",
-      "Educational Platforms",
-      "Video Conferencing Licenses",
-      "Learning Management Systems (LMS)",
-      "Cybersecurity Solutions",
-      "Cloud Storage",
-      "Cloud Computing Credits",
-    ],
-  },
-  {
-    icon: Boxes,
-    title: "Connectivity & Infrastructure",
-    items: [
-      "Internet Connectivity",
-      "Networking Equipment",
-      "Data Storage Solutions",
-      "Power Backup Systems",
-      "Technical Support",
-      "Technology Maintenance",
-    ],
-  },
-  {
-    icon: GraduationCap,
-    title: "Capacity Building",
-    items: [
-      "Digital Skills Training",
-      "Technology Leadership",
-      "Digital Literacy Programs",
-      "Technical Mentorship",
-      "Educational Resources",
-      "Training Materials",
-    ],
-  },
-];
+export default function CurrentNeeds() {
+  const categories = [
+    {
+      title: "Technology Equipment",
+      icon: Monitor,
+      items: [
+        "Desktop Computers",
+        "Laptop Computers",
+        "Tablets and iPads",
+        "Computer Monitors",
+        "Printers and Scanners",
+        "Projectors and Presentation Equipment",
+        "Webcams and Digital Cameras",
+        "Audio and Video Conferencing Equipment",
+      ],
+    },
+    {
+      title: "Software and Digital Resources",
+      icon: Layers,
+      items: [
+        "Operating Systems and Productivity Software",
+        "Educational and Training Platforms",
+        "Video Conferencing Licenses (Zoom and similar platforms)",
+        "Learning Management Systems (LMS)",
+        "Cybersecurity and Data Protection Solutions",
+        "Cloud Storage and Cloud Computing Credits",
+      ],
+    },
+    {
+      title: "Connectivity and Infrastructure",
+      icon: Wifi,
+      items: [
+        "Internet Connectivity Support",
+        "Networking Equipment and Accessories",
+        "Data Storage Solutions",
+        "Power Backup Systems and Accessories",
+        "Technology Maintenance and Technical Support Services",
+      ],
+    },
+    {
+      title: "Capacity Building Needs",
+      icon: GraduationCap,
+      items: [
+        "Digital Skills Training Programs",
+        "Technology Leadership Development",
+        "Digital Literacy Training for Communities",
+        "Technical Support and Mentorship Programs",
+        "Training Resources and Educational Materials",
+      ],
+    },
+  ];
 
-export default function TechnologyNeedsSection() {
+  const iconMap = {
+    "Desktop Computers": Monitor,
+    "Laptop Computers": Laptop,
+    "Tablets and iPads": Tablet,
+    "Computer Monitors": Monitor,
+    "Printers and Scanners": Printer,
+    "Projectors and Presentation Equipment": Presentation,
+    "Webcams and Digital Cameras": Camera,
+    "Audio and Video Conferencing Equipment": Video,
+    "Operating Systems and Productivity Software": Layers,
+    "Educational and Training Platforms": BookOpen,
+    "Video Conferencing Licenses (Zoom and similar platforms)": Video,
+    "Learning Management Systems (LMS)": BookOpen,
+    "Cybersecurity and Data Protection Solutions": Shield,
+    "Cloud Storage and Cloud Computing Credits": Cloud,
+    "Internet Connectivity Support": Wifi,
+    "Networking Equipment and Accessories": Wifi,
+    "Data Storage Solutions": Server,
+    "Power Backup Systems and Accessories": BatteryCharging,
+    "Technology Maintenance and Technical Support Services": Wrench,
+    "Digital Skills Training Programs": GraduationCap,
+    "Technology Leadership Development": Users,
+    "Digital Literacy Training for Communities": BookOpen,
+    "Technical Support and Mentorship Programs": Users,
+    "Training Resources and Educational Materials": BookOpen,
+  };
+
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1700px] mx-auto px-6">
+    <main className="relative overflow-hidden bg-white">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#061C3F]/5 blur-3xl" />
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .7 }}
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
-        >
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
 
-          {/* HERO */}
+          {/* Hero */}
 
-          <div className="grid lg:grid-cols-2">
-
-            {/* IMAGE */}
-
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
-
-              <img
-                src="/technology-needs.jpg"
-                alt="Current Technology Needs"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
-
-              <div className="absolute bottom-12 left-10 max-w-md text-white">
-
-                <div className="w-24 h-1 rounded-full bg-[#C79A2B] mb-6" />
-
-                <h3 className="text-4xl font-black uppercase">
-                  Current Technology Needs
-                </h3>
-
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Partner with us to expand digital access, strengthen
-                  learning opportunities, and empower communities
-                  through technology.
-                </p>
-
-              </div>
-
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/5 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+              <Sparkles className="h-4 w-4" />
+              Current Needs
             </div>
 
-            {/* CONTENT */}
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-[#061C3F] md:text-7xl">
+              Technology
+              <span className="block text-[#C79A2B]">
+                Current Needs
+              </span>
+            </h1>
 
-            <div className="bg-white p-12 lg:p-16">
+            <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
 
-              <span className="inline-block w-24 h-1 rounded-full bg-[#C79A2B] mb-8" />
+            <p className="mx-auto mt-10 max-w-3xl text-lg leading-9 text-gray-600">
+              To effectively implement the Technology Access Initiative and
+              expand its impact across communities and nations, Rehoboth
+              Discipleship International (RHDI) is seeking strategic support and
+              resources in the following areas:
+            </p>
+          </motion.div>
 
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                CURRENT NEEDS
-              </h2>
+          {/* Categories */}
 
-              <div className="w-28 h-1 bg-[#C79A2B] mt-6 mb-10" />
+          <section className="mt-28 space-y-12">
+            {categories.map((category, index) => {
+              const CategoryIcon = category.icon;
 
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
-
-                <p>
-                  To effectively implement the Technology Access
-                  Initiative and expand its impact across communities
-                  and nations, Rehoboth Discipleship International
-                  (RHDI) is seeking strategic support and resources in
-                  key technology and capacity-building areas.
-                </p>
-
-                <p>
-                  These resources will strengthen digital learning,
-                  improve communication and collaboration, enhance
-                  program delivery, and expand equitable access to
-                  technology for underserved communities.
-                </p>
-
-                <p>
-                  Every contribution helps create opportunities for
-                  education, leadership development, innovation, and
-                  sustainable transformation through technology.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* RESOURCE CATEGORIES */}
-
-          <div className="bg-[#061C3F] px-8 py-16">
-
-            <div className="text-center mb-14">
-
-              <h3 className="text-4xl font-black uppercase text-white">
-                Priority Resource Needs
-              </h3>
-
-              <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]" />
-
-            </div>
-
-            <div className="grid gap-8 lg:grid-cols-2">
-
-              {categories.map((category, index) => {
-
-                const Icon = category.icon;
-
-                return (
-
-                  <motion.div
-                    key={index}
-                    whileHover={{ y: -6 }}
-                    className="rounded-2xl border border-[#C79A2B]/20 bg-white/5 p-8"
-                  >
-
-                    <div className="flex items-center gap-5 mb-6">
-
-                      <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#C79A2B]">
-
-                        <Icon
-                          size={30}
-                          className="text-white"
-                        />
-
-                      </div>
-
-                      <h3 className="text-2xl font-bold text-white uppercase">
-                        {category.title}
-                      </h3>
-
+              return (
+                <motion.div
+                  key={category.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.08 }}
+                  viewport={{ once: true }}
+                  className="rounded-[32px] border border-gray-100 bg-white p-8 shadow-sm"
+                >
+                  <div className="flex items-center gap-5">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#061C3F] text-white">
+                      <CategoryIcon className="h-8 w-8" />
                     </div>
 
-                    <div className="space-y-4">
+                    <div>
+                      <h2 className="text-3xl font-bold text-[#061C3F]">
+                        {category.title}
+                      </h2>
+                    </div>
+                  </div>
 
-                      {category.items.map((item) => (
+                  <div className="mt-10 grid gap-5 md:grid-cols-2">
+                    {category.items.map((item) => {
+                      const Icon = iconMap[item] || Monitor;
 
+                      return (
                         <div
                           key={item}
-                          className="flex items-start gap-3"
+                          className="group flex items-center gap-4 rounded-2xl border border-gray-100 p-5 transition-all hover:-translate-y-1 hover:border-[#C79A2B]/30 hover:shadow-lg"
                         >
+                          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#061C3F] text-white group-hover:bg-[#C79A2B]">
+                            <Icon className="h-5 w-5" />
+                          </div>
 
-                          <ArrowRight
-                            size={18}
-                            className="text-[#C79A2B] mt-1"
-                          />
-
-                          <span className="text-gray-300">
-                            {item}
-                          </span>
-
+                          <p className="text-lg text-gray-700">{item}</p>
                         </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </section>
 
-                      ))}
+          {/* Closing */}
 
-                    </div>
-
-                  </motion.div>
-
-                );
-
-              })}
-
-            </div>
-
-          </div>
-
-          {/* TARGET REACH */}
-
-          <div className="bg-[#F8F8F8] px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <div className="flex justify-center">
-
-                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[#061C3F]">
-
-                  <Target
-                    size={42}
-                    className="text-[#C79A2B]"
-                  />
-
-                </div>
-
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-32 overflow-hidden rounded-[36px] bg-[#061C3F] p-10 text-white md:p-16"
+          >
+            <div className="max-w-5xl">
+              <div className="inline-flex items-center gap-2 font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                <ArrowRight className="h-5 w-5" />
+                Our Goal
               </div>
 
-              <h3 className="mt-8 text-4xl font-black uppercase text-[#061C3F]">
-                Target Reach
-              </h3>
-
-              <div className="mx-auto mt-5 w-28 h-1 bg-[#C79A2B]" />
-
-              <div className="mt-10 text-7xl font-black text-[#061C3F]">
-                1,500+
-              </div>
-
-              <div className="mt-3 text-2xl font-bold uppercase text-[#C79A2B]">
-                Direct Beneficiaries
-              </div>
-
-              <p className="mt-8 text-lg leading-9 text-gray-700 max-w-4xl mx-auto">
-
-                Through these strategic technology investments, RHDI
-                aims to directly benefit more than 1,500 individuals
-                across multiple countries by expanding access to
-                technology, strengthening digital learning, improving
-                communication, and creating sustainable opportunities
-                for education, leadership development, and community
-                transformation.
-
+              <p className="mt-8 text-lg leading-9 text-gray-200">
+                Through these resources, RHDI aims to strengthen digital
+                learning opportunities, improve communication and collaboration,
+                enhance program delivery, and expand access to technology for
+                underserved communities.
               </p>
 
+              <div className="my-10 h-px bg-white/10" />
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                  Target Reach
+                </h3>
+
+                <p className="mt-4 text-4xl font-bold">
+                  1,500+ Direct Beneficiaries across multiple countries.
+                </p>
+              </div>
             </div>
+          </motion.section>
 
-          </div>
-
-        </motion.div>
-
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }

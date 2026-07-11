@@ -1,6 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
+  Sparkles,
   Building2,
   Handshake,
   Briefcase,
@@ -8,263 +8,212 @@ import {
   HeartHandshake,
   Users,
   Globe,
-  TrendingUp,
-  Quote,
   ArrowRight,
 } from "lucide-react";
 
-const opportunities = [
-  {
-    icon: Briefcase,
-    title: "Corporate Giving",
-    text: "Support leadership development, education, humanitarian service, and community transformation through financial contributions and sponsorships.",
-  },
-  {
-    icon: Laptop,
-    title: "Technology Donations",
-    text: "Donate computers, laptops, software, digital devices, and technology resources that expand access to learning and innovation.",
-  },
-  {
-    icon: Users,
-    title: "Employee Engagement",
-    text: "Empower employees to serve through volunteering, mentorship, skills-based service, and community outreach initiatives.",
-  },
-  {
-    icon: Handshake,
-    title: "Strategic Collaboration",
-    text: "Develop long-term partnerships that combine expertise, innovation, and shared values to maximize community impact.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Community Investment",
-    text: "Invest in programs that strengthen families, develop leaders, empower youth, and improve the well-being of communities.",
-  },
-  {
-    icon: Globe,
-    title: "Global Impact",
-    text: "Join an international network of organizations working together to create sustainable solutions across multiple countries.",
-  },
-];
+export default function CorporatePartnerships() {
+  const partnershipAreas = [
+    {
+      icon: Briefcase,
+      title: "Corporate Investment",
+      description:
+        "Financial contributions, sponsorship opportunities, and strategic investments that strengthen leadership development, education, and community transformation initiatives.",
+    },
+    {
+      icon: Laptop,
+      title: "Technology & Innovation",
+      description:
+        "Technology donations, digital empowerment initiatives, and innovation partnerships that expand equitable access to technology and digital learning opportunities.",
+    },
+    {
+      icon: Users,
+      title: "Employee Engagement",
+      description:
+        "Employee volunteer initiatives, mentorship programs, capacity-building activities, and collaborative partnerships that create sustainable community impact.",
+    },
+  ];
 
-export default function CorporatePartnershipsSection() {
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1700px] mx-auto px-6">
+    <main className="relative overflow-hidden bg-white">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#061C3F]/5 blur-3xl" />
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .7 }}
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
-        >
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
 
-          {/* HERO */}
+          {/* Hero */}
 
-          <div className="grid lg:grid-cols-2">
-
-            {/* IMAGE */}
-
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
-
-              <img
-                src="/corporate-partnerships.jpg"
-                alt="Corporate Partnerships"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
-
-              <div className="absolute bottom-12 left-10 max-w-md text-white">
-
-                <div className="w-24 h-1 rounded-full bg-[#C79A2B] mb-6" />
-
-                <h3 className="text-4xl font-black uppercase">
-                  Corporate Partnerships
-                </h3>
-
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Creating sustainable social impact through strategic
-                  collaboration, innovation, and shared purpose.
-                </p>
-
-              </div>
-
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/5 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+              <Sparkles className="h-4 w-4" />
+              Corporate Partnerships
             </div>
 
-            {/* CONTENT */}
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-[#061C3F] md:text-7xl">
+              Building Strategic
+              <span className="block text-[#C79A2B]">
+                Corporate Partnerships
+              </span>
+            </h1>
 
-            <div className="bg-white p-12 lg:p-16">
+            <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
 
-              <span className="inline-block h-1 w-24 rounded-full bg-[#C79A2B] mb-8" />
+            <p className="mx-auto mt-10 max-w-3xl text-lg leading-9 text-gray-600">
+              Rehoboth Discipleship International (RHDI) believes that businesses
+              and corporations play a vital role in creating sustainable social
+              impact. Through our Corporate Partnerships program, we collaborate
+              with companies that share our commitment to leadership
+              development, education, community transformation, digital
+              empowerment, and humanitarian service.
+            </p>
+          </motion.div>
 
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                CORPORATE PARTNERSHIPS
+          {/* Introduction */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-24 max-w-5xl text-center"
+          >
+            <Building2 className="mx-auto h-14 w-14 text-[#C79A2B]" />
+
+            <h2 className="mt-6 text-3xl font-bold text-[#061C3F]">
+              Creating Sustainable Social Impact
+            </h2>
+
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              We provide opportunities for corporations to invest in initiatives
+              that equip leaders, empower communities, expand access to
+              technology, and create meaningful change across nations. Our
+              partnerships are built on shared values, innovation,
+              accountability, and long-term impact.
+            </p>
+          </motion.section>
+
+          {/* Partnership Areas */}
+
+          <section className="mt-28">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-[#061C3F]">
+                Ways Corporations Can Partner
               </h2>
 
-              <div className="mt-6 mb-10 h-1 w-28 bg-[#C79A2B]" />
-
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
-
-                <p>
-                  Rehoboth Discipleship International (RHDI) believes
-                  businesses and corporations play a vital role in
-                  creating sustainable social impact. Through our
-                  Corporate Partnerships Program, we collaborate with
-                  organizations that share our commitment to leadership
-                  development, education, digital empowerment,
-                  humanitarian service, and community transformation.
-                </p>
-
-                <p>
-                  We provide opportunities for companies to invest in
-                  initiatives that equip leaders, strengthen
-                  communities, expand access to technology, and create
-                  measurable, long-term impact across nations.
-                </p>
-
-                <p>
-                  Every partnership is built on shared values,
-                  innovation, accountability, transparency, and a
-                  commitment to creating lasting positive change for
-                  individuals, families, and communities.
-                </p>
-
-              </div>
-
+              <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-[#C79A2B]" />
             </div>
 
-          </div>
-
-          {/* OPPORTUNITIES */}
-
-          <div className="bg-[#061C3F] px-8 py-16">
-
-            <div className="text-center mb-14">
-
-              <h3 className="text-4xl font-black uppercase text-white">
-                Partnership Opportunities
-              </h3>
-
-              <div className="mx-auto mt-5 h-1 w-28 bg-[#C79A2B]" />
-
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-              {opportunities.map((item) => {
-
+            <div className="mt-16 grid gap-8 md:grid-cols-3">
+              {partnershipAreas.map((item, index) => {
                 const Icon = item.icon;
 
                 return (
-
                   <motion.div
-                    key={item.title}
-                    whileHover={{ y: -8 }}
-                    className="rounded-2xl border border-[#C79A2B]/20 bg-white/5 p-8 backdrop-blur-sm"
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.08 }}
+                    viewport={{ once: true }}
+                    className="group rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:-translate-y-2 hover:border-[#C79A2B]/30 hover:shadow-xl"
                   >
-
-                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#C79A2B]">
-
-                      <Icon
-                        size={30}
-                        className="text-white"
-                      />
-
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#061C3F] text-white transition-all group-hover:bg-[#C79A2B]">
+                      <Icon className="h-8 w-8" />
                     </div>
 
-                    <h4 className="text-xl font-bold uppercase text-white">
+                    <h3 className="mt-8 text-2xl font-bold text-[#061C3F]">
                       {item.title}
-                    </h4>
+                    </h3>
 
-                    <p className="mt-4 leading-7 text-gray-300">
-                      {item.text}
+                    <p className="mt-5 text-lg leading-8 text-gray-600">
+                      {item.description}
                     </p>
-
-                    <ArrowRight className="mt-6 text-[#C79A2B]" />
-
                   </motion.div>
-
                 );
-
               })}
-
             </div>
+          </section>
 
-          </div>
+          {/* Support */}
 
-          {/* WHY PARTNER */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-28 max-w-5xl text-center"
+          >
+            <Handshake className="mx-auto h-14 w-14 text-[#C79A2B]" />
 
-          <div className="bg-white px-8 py-20">
+            <h2 className="mt-6 text-3xl font-bold text-[#061C3F]">
+              Why Partner With RHDI?
+            </h2>
 
-            <div className="max-w-5xl mx-auto text-center">
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              Corporate partners can support RHDI through financial
+              contributions, technology donations, employee engagement
+              initiatives, capacity-building programs, sponsorship
+              opportunities, and strategic collaborations that strengthen
+              communities and improve lives.
+            </p>
 
-              <TrendingUp
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
-
-              <h3 className="mt-8 text-4xl font-black uppercase text-[#061C3F]">
-                Why Corporate Partners Choose RHDI
-              </h3>
-
-              <div className="mx-auto mt-5 h-1 w-28 bg-[#C79A2B]" />
-
-              <p className="mt-10 text-lg leading-9 text-gray-700">
-
-                Corporate partners become part of a global movement
-                that develops future leaders, expands educational
-                opportunities, strengthens communities, promotes
-                digital inclusion, and creates measurable social
-                impact. Together, we build sustainable solutions that
-                benefit both present and future generations while
-                advancing responsible corporate citizenship.
-
-              </p>
-
-            </div>
-
-          </div>
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              By partnering with RHDI, corporations become part of a global
+              movement that is transforming lives, developing future leaders,
+              and creating sustainable solutions that generate measurable social
+              impact.
+            </p>
+          </motion.section>
 
           {/* CTA */}
 
-          <div className="bg-[#F8F8F8] px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <Quote
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
-
-              <blockquote className="mt-10 text-2xl italic font-semibold leading-10 text-[#061C3F]">
-
-                "Together, we can build stronger communities,
-                empower future generations, and create lasting
-                change across nations. Partner with us today."
-
-              </blockquote>
-
-              <div className="mt-14">
-
-                <h3 className="text-3xl font-black text-[#061C3F]">
-                  Rehoboth Discipleship International
-                </h3>
-
-                <h4 className="mt-4 text-2xl font-bold text-[#C79A2B]">
-                  Equipping Leaders. Empowering Communities.
-                  Transforming Nations.
-                </h4>
-
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-32 overflow-hidden rounded-[36px] bg-[#061C3F] p-10 text-white md:p-16"
+          >
+            <div className="max-w-5xl">
+              <div className="inline-flex items-center gap-2 font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                <ArrowRight className="h-5 w-5" />
+                Partner With Us
               </div>
 
+              <p className="mt-8 text-2xl font-semibold leading-10 text-white">
+                Together, we can build stronger communities, empower future
+                generations, and create lasting change across nations.
+              </p>
+
+              <div className="my-10 h-px bg-white/10" />
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <HeartHandshake className="mb-5 h-10 w-10 text-[#C79A2B]" />
+
+                <h3 className="text-3xl font-bold">
+                  Partner with us today.
+                </h3>
+
+                <div className="mt-8 space-y-3">
+                  <p className="text-xl font-semibold">
+                    Rehoboth Discipleship International (RHDI)
+                  </p>
+
+                  <p className="text-lg text-gray-200">
+                    Equipping Leaders. Empowering Communities. Transforming
+                    Nations.
+                  </p>
+                </div>
+              </div>
             </div>
+          </motion.section>
 
-          </div>
-
-        </motion.div>
-
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }

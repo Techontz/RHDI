@@ -1,273 +1,235 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
+  Sparkles,
   Handshake,
+  Building2,
   Laptop,
   Cloud,
   Wifi,
+  Monitor,
+  BookOpen,
   GraduationCap,
-  Briefcase,
+  HeartHandshake,
   DollarSign,
-  Building2,
   Users,
-  Globe,
-  Quote,
   ArrowRight,
+  CheckCircle2,
 } from "lucide-react";
 
-const partnerships = [
-  {
-    icon: Laptop,
-    title: "Technology Equipment",
-    text: "Donate computers, laptops, tablets, monitors, and digital devices that expand access to learning and technology.",
-  },
-  {
-    icon: Cloud,
-    title: "Software & Cloud Support",
-    text: "Provide software licenses, cloud computing services, digital platforms, and technology infrastructure.",
-  },
-  {
-    icon: Wifi,
-    title: "Connectivity Solutions",
-    text: "Support internet connectivity, networking equipment, and communication technologies for underserved communities.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Digital Learning",
-    text: "Partner in delivering educational technology, virtual learning platforms, and digital skills development programs.",
-  },
-  {
-    icon: Users,
-    title: "Capacity Building",
-    text: "Support mentorship, technology leadership, and digital literacy initiatives that strengthen communities.",
-  },
-  {
-    icon: DollarSign,
-    title: "Financial Support",
-    text: "Provide grants, sponsorships, and financial contributions that expand technology access and program delivery.",
-  },
-  {
-    icon: Building2,
-    title: "Corporate CSR",
-    text: "Collaborate through Corporate Social Responsibility initiatives that create measurable social impact.",
-  },
-  {
-    icon: Briefcase,
-    title: "Employee Volunteers",
-    text: "Engage your team through mentorship, professional expertise, volunteering, and skills-based service.",
-  },
-  {
-    icon: Handshake,
-    title: "Strategic Partnerships",
-    text: "Build long-term partnerships that strengthen digital inclusion and sustainable community transformation.",
-  },
-];
+export default function PartnershipOpportunities() {
+  const opportunities = [
+    {
+      icon: Laptop,
+      title: "Technology Equipment Donations",
+      description:
+        "(Computers, Laptops, Tablets, Monitors, and Digital Devices)",
+    },
+    {
+      icon: Monitor,
+      title: "Software Donations and Licensing Support",
+      description: "",
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Computing and Digital Infrastructure Support",
+      description: "",
+    },
+    {
+      icon: Wifi,
+      title: "Internet Connectivity and Networking Solutions",
+      description: "",
+    },
+    {
+      icon: BookOpen,
+      title: "Educational Technology and Digital Learning Platforms",
+      description: "",
+    },
+    {
+      icon: GraduationCap,
+      title: "Capacity Building and Digital Skills Training Programs",
+      description: "",
+    },
+    {
+      icon: DollarSign,
+      title: "Financial Contributions and Grant Funding",
+      description: "",
+    },
+    {
+      icon: HeartHandshake,
+      title: "Corporate Social Responsibility (CSR) Partnerships",
+      description: "",
+    },
+    {
+      icon: Users,
+      title: "Employee Volunteer and Mentorship Programs",
+      description: "",
+    },
+    {
+      icon: Building2,
+      title: "Strategic and Long-Term Institutional Partnerships",
+      description: "",
+    },
+  ];
 
-export default function TechnologyPartnershipsSection() {
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1700px] mx-auto px-6">
+    <main className="relative overflow-hidden bg-white">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#061C3F]/5 blur-3xl" />
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .7 }}
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
-        >
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
 
-          {/* HERO */}
+          {/* Hero */}
 
-          <div className="grid lg:grid-cols-2">
-
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
-
-              <img
-                src="/technology-partnerships.jpg"
-                alt="Technology Partnerships"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
-
-              <div className="absolute bottom-12 left-10 max-w-md text-white">
-
-                <div className="h-1 w-24 rounded-full bg-[#C79A2B] mb-6" />
-
-                <h3 className="text-4xl font-black uppercase">
-                  Partnership Opportunities
-                </h3>
-
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Working together to expand technology access,
-                  strengthen digital inclusion, and transform
-                  communities across nations.
-                </p>
-
-              </div>
-
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/5 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+              <Sparkles className="h-4 w-4" />
+              Technology Initiative
             </div>
 
-            <div className="bg-white p-12 lg:p-16">
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-[#061C3F] md:text-7xl">
+              Partnership
+              <span className="block text-[#C79A2B]">
+                Opportunities
+              </span>
+            </h1>
 
-              <span className="inline-block h-1 w-24 rounded-full bg-[#C79A2B] mb-8" />
+            <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
 
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                PARTNERSHIP OPPORTUNITIES
+            <p className="mx-auto mt-10 max-w-3xl text-lg leading-9 text-gray-600">
+              The Technology Access Initiative invites corporations,
+              foundations, technology companies, educational institutions,
+              faith-based organizations, and individual partners to collaborate
+              in expanding equitable access to technology and digital
+              opportunities for underserved communities around the world.
+            </p>
+          </motion.div>
+
+          {/* Introduction */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-24 max-w-5xl text-center"
+          >
+            <Handshake className="mx-auto h-14 w-14 text-[#C79A2B]" />
+
+            <h2 className="mt-6 text-3xl font-bold text-[#061C3F]">
+              Working Together for Greater Impact
+            </h2>
+
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              Rehoboth Discipleship International (RHDI) believes that strategic
+              partnerships are essential for bridging the digital divide and
+              empowering individuals, leaders, and communities through
+              technology, education, and innovation. Through collaborative
+              engagement, partners have the opportunity to make a meaningful and
+              sustainable impact across multiple countries and communities.
+            </p>
+          </motion.section>
+
+          {/* Partnership Opportunities */}
+
+          <section className="mt-28">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-[#061C3F]">
+                Partnership Opportunities
               </h2>
 
-              <div className="mt-6 mb-10 h-1 w-28 bg-[#C79A2B]" />
-
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
-
-                <p>
-                  The Technology Access Initiative invites corporations,
-                  foundations, technology companies, educational
-                  institutions, faith-based organizations, and
-                  individual partners to collaborate in expanding
-                  equitable access to technology and digital
-                  opportunities for underserved communities.
-                </p>
-
-                <p>
-                  Rehoboth Discipleship International (RHDI) believes
-                  strategic partnerships are essential for bridging the
-                  digital divide and empowering individuals, leaders,
-                  and communities through technology, education, and
-                  innovation.
-                </p>
-
-                <p>
-                  Together, we can strengthen digital learning,
-                  improve communication and collaboration, expand
-                  access to technology resources, and positively impact
-                  more than 1,500 direct beneficiaries across multiple
-                  countries.
-                </p>
-
-              </div>
-
+              <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-[#C79A2B]" />
             </div>
 
-          </div>
-
-          {/* PARTNERSHIP OPPORTUNITIES */}
-
-          <div className="bg-[#061C3F] px-8 py-16">
-
-            <div className="text-center mb-14">
-
-              <h3 className="text-4xl font-black uppercase text-white">
-                Partnership Opportunities
-              </h3>
-
-              <div className="mx-auto mt-5 h-1 w-28 bg-[#C79A2B]" />
-
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-              {partnerships.map((item) => {
+            <div className="mt-16 grid gap-8 md:grid-cols-2">
+              {opportunities.map((item, index) => {
                 const Icon = item.icon;
 
                 return (
                   <motion.div
-                    key={item.title}
-                    whileHover={{ y: -8 }}
-                    className="rounded-2xl border border-[#C79A2B]/20 bg-white/5 p-8 backdrop-blur-sm"
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.06 }}
+                    viewport={{ once: true }}
+                    className="group flex items-start gap-5 rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:-translate-y-2 hover:border-[#C79A2B]/30 hover:shadow-xl"
                   >
-
-                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#C79A2B]">
-                      <Icon size={30} className="text-white" />
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#061C3F] text-white transition-all group-hover:bg-[#C79A2B]">
+                      <Icon className="h-6 w-6" />
                     </div>
 
-                    <h4 className="text-xl font-bold uppercase text-white">
-                      {item.title}
-                    </h4>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#061C3F]">
+                        {item.title}
+                      </h3>
 
-                    <p className="mt-4 leading-7 text-gray-300">
-                      {item.text}
-                    </p>
-
-                    <ArrowRight className="mt-6 text-[#C79A2B]" />
-
+                      {item.description && (
+                        <p className="mt-3 text-lg leading-8 text-gray-600">
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
                   </motion.div>
                 );
               })}
-
             </div>
+          </section>
 
-          </div>
+          {/* Impact */}
 
-          {/* WHY PARTNER */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-28 max-w-5xl text-center"
+          >
+            <CheckCircle2 className="mx-auto h-14 w-14 text-[#C79A2B]" />
 
-          <div className="bg-white px-8 py-20">
+            <h2 className="mt-6 text-3xl font-bold text-[#061C3F]">
+              Partnership Impact
+            </h2>
 
-            <div className="max-w-5xl mx-auto text-center">
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              Through these partnerships, RHDI seeks to strengthen digital
+              learning opportunities, improve communication and collaboration,
+              expand access to technology resources, and empower more than
+              1,500 direct beneficiaries across multiple countries.
+            </p>
+          </motion.section>
 
-              <Globe
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
+          {/* Statement */}
 
-              <h3 className="mt-8 text-4xl font-black uppercase text-[#061C3F]">
-                Why Partner With RHDI?
-              </h3>
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-32 overflow-hidden rounded-[36px] bg-[#061C3F] p-10 text-white md:p-16"
+          >
+            <div className="max-w-5xl">
+              <div className="inline-flex items-center gap-2 font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                <ArrowRight className="h-5 w-5" />
+                Partnership Opportunities Statement
+              </div>
 
-              <div className="mx-auto mt-5 h-1 w-28 bg-[#C79A2B]" />
-
-              <p className="mt-10 text-lg leading-9 text-gray-700">
-
-                Every partnership contributes to expanding digital
-                inclusion, increasing access to technology, improving
-                educational opportunities, strengthening leadership,
-                and empowering underserved communities. By working
-                together, we can create sustainable solutions that
-                equip individuals with the knowledge, resources, and
-                opportunities needed to thrive in an increasingly
-                connected world.
-
+              <p className="mt-10 text-3xl font-semibold leading-[1.7] text-white">
+                “We invite partners from around the world to join us in
+                advancing digital inclusion and community transformation by
+                investing in technology access, digital education, and
+                sustainable solutions that empower individuals and communities
+                to learn, connect, innovate, and thrive.”
               </p>
-
             </div>
+          </motion.section>
 
-          </div>
-
-          {/* STATEMENT */}
-
-          <div className="bg-[#F8F8F8] px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <Quote
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
-
-              <h3 className="mt-8 text-4xl font-black uppercase text-[#061C3F]">
-                Partnership Statement
-              </h3>
-
-              <div className="mx-auto mt-5 h-1 w-28 bg-[#C79A2B]" />
-
-              <blockquote className="mt-10 text-2xl italic font-semibold leading-10 text-[#061C3F]">
-
-                "We invite partners from around the world to join us
-                in advancing digital inclusion and community
-                transformation by investing in technology access,
-                digital education, and sustainable solutions that
-                empower individuals and communities to learn, connect,
-                innovate, and thrive."
-
-              </blockquote>
-
-            </div>
-
-          </div>
-
-        </motion.div>
-
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }

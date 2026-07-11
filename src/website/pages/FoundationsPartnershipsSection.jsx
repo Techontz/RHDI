@@ -1,268 +1,157 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
+  Sparkles,
   Landmark,
+  Handshake,
   HeartHandshake,
-  GraduationCap,
-  Laptop,
-  Users,
-  HandHeart,
-  BarChart3,
-  Globe,
-  Quote,
+  ShieldCheck,
   ArrowRight,
 } from "lucide-react";
 
-const partnershipAreas = [
-  {
-    icon: GraduationCap,
-    title: "Education & Leadership",
-    text: "Support leadership development, education, mentorship, and lifelong learning initiatives that empower individuals and communities.",
-  },
-  {
-    icon: Laptop,
-    title: "Digital Inclusion",
-    text: "Expand equitable access to technology, digital learning opportunities, and innovation that bridge the digital divide.",
-  },
-  {
-    icon: HandHeart,
-    title: "Community Transformation",
-    text: "Invest in humanitarian initiatives, family strengthening, youth empowerment, and sustainable community development.",
-  },
-  {
-    icon: Users,
-    title: "Capacity Building",
-    text: "Strengthen organizations, leaders, volunteers, and communities through training, mentorship, and practical skills development.",
-  },
-  {
-    icon: BarChart3,
-    title: "Measurable Impact",
-    text: "Support initiatives with clear outcomes, transparent reporting, accountability, and long-term community transformation.",
-  },
-  {
-    icon: Globe,
-    title: "Global Collaboration",
-    text: "Join an international network of foundations and partners committed to creating sustainable impact across multiple nations.",
-  },
-];
-
-export default function FoundationsPartnershipsSection() {
+export default function FoundationsPartnerships() {
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1700px] mx-auto px-6">
+    <main className="relative overflow-hidden bg-white">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#C79A2B]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#061C3F]/5 blur-3xl" />
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
-        >
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
 
-          {/* HERO */}
+          {/* Hero */}
 
-          <div className="grid lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C79A2B]/20 bg-[#C79A2B]/5 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+              <Sparkles className="h-4 w-4" />
+              Foundations Partnerships
+            </div>
 
-            {/* IMAGE */}
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-[#061C3F] md:text-7xl">
+              Building Strategic
+              <span className="block text-[#C79A2B]">
+                Foundations Partnerships
+              </span>
+            </h1>
 
-            <div className="relative h-[500px] lg:h-auto overflow-hidden">
+            <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-[#C79A2B]" />
 
-              <img
-                src="/foundations-partnerships.jpg"
-                alt="Foundations Partnerships"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+            <p className="mx-auto mt-10 max-w-3xl text-lg leading-9 text-gray-600">
+              Rehoboth Discipleship International (RHDI) partners with
+              charitable foundations, grant-making organizations, and
+              philanthropic institutions that are committed to creating
+              sustainable and transformational impact in communities around the
+              world. Through our Foundations Partnerships program, we work
+              together to invest in initiatives that equip leaders, expand
+              educational opportunities, strengthen communities, promote
+              digital inclusion, and advance humanitarian and faith-based
+              development.
+            </p>
+          </motion.div>
 
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061C3F]/90 via-[#061C3F]/55 to-transparent" />
+          {/* Section 1 */}
 
-              <div className="absolute bottom-12 left-10 max-w-md text-white">
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-24 rounded-[36px] border border-gray-100 bg-white p-10 shadow-sm md:p-14"
+          >
+            <Landmark className="h-14 w-14 text-[#C79A2B]" />
 
-                <div className="w-24 h-1 rounded-full bg-[#C79A2B] mb-6" />
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              Our foundation partners help support programs that address real
+              community needs through leadership development, education and
+              training, technology access, youth and family empowerment,
+              community outreach, and capacity-building initiatives. By
+              combining resources, expertise, and a shared vision, we create
+              opportunities that empower individuals and communities to reach
+              their full potential.
+            </p>
+          </motion.section>
 
-                <h3 className="text-4xl font-black uppercase">
-                  Foundations Partnerships
-                </h3>
+          {/* Section 2 */}
 
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  Advancing sustainable transformation through strategic
-                  collaboration with charitable foundations and
-                  philanthropic partners.
-                </p>
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 rounded-[36px] border border-gray-100 bg-white p-10 shadow-sm md:p-14"
+          >
+            <ShieldCheck className="h-14 w-14 text-[#C79A2B]" />
 
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+              RHDI is committed to building transparent, accountable, and
+              long-term partnerships that produce measurable outcomes and
+              lasting transformation. We believe that strategic collaboration
+              with foundations can generate innovative solutions, strengthen
+              local leadership, and create sustainable impact that extends
+              across generations and nations.
+            </p>
+          </motion.section>
+
+          {/* Section 3 */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 rounded-[36px] border border-gray-100 bg-white p-10 shadow-sm md:p-14"
+          >
+            <Handshake className="h-14 w-14 text-[#C79A2B]" />
+
+            <p className="text-lg leading-9 text-gray-600">
+              By partnering with RHDI, foundations become part of a global
+              movement dedicated to empowering people, transforming communities,
+              and building a future marked by hope, opportunity, and positive
+              change.
+            </p>
+          </motion.section>
+
+          {/* CTA */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-32 overflow-hidden rounded-[36px] bg-[#061C3F] p-10 text-white md:p-16"
+          >
+            <div className="max-w-5xl">
+              <div className="inline-flex items-center gap-2 font-semibold uppercase tracking-[0.25em] text-[#C79A2B]">
+                <ArrowRight className="h-5 w-5" />
+                Foundations Partnership
               </div>
 
-            </div>
-
-            {/* CONTENT */}
-
-            <div className="bg-white p-12 lg:p-16">
-
-              <span className="inline-block h-1 w-24 rounded-full bg-[#C79A2B] mb-8" />
-
-              <h2 className="text-5xl lg:text-6xl font-black uppercase text-[#061C3F]">
-                FOUNDATIONS PARTNERSHIPS
-              </h2>
-
-              <div className="mt-6 mb-10 h-1 w-28 bg-[#C79A2B]" />
-
-              <div className="space-y-7 text-[19px] leading-9 text-gray-700">
-
-                <p>
-                  Rehoboth Discipleship International (RHDI) partners
-                  with charitable foundations, grant-making
-                  organizations, and philanthropic institutions that
-                  share our commitment to sustainable community
-                  transformation and human development.
-                </p>
-
-                <p>
-                  Together, we invest in leadership development,
-                  education, digital inclusion, humanitarian service,
-                  youth and family empowerment, and capacity-building
-                  initiatives that create measurable, long-term impact.
-                </p>
-
-                <p>
-                  Through transparent stewardship, shared vision, and
-                  collaborative innovation, we work with foundation
-                  partners to strengthen communities, develop future
-                  leaders, and expand opportunities for generations to
-                  come.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* PARTNERSHIP AREAS */}
-
-          <div className="bg-[#061C3F] px-8 py-16">
-
-            <div className="text-center mb-14">
-
-              <h3 className="text-4xl font-black uppercase text-white">
-                Areas of Partnership
-              </h3>
-
-              <div className="mx-auto mt-5 h-1 w-28 bg-[#C79A2B]" />
-
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-              {partnershipAreas.map((item) => {
-
-                const Icon = item.icon;
-
-                return (
-
-                  <motion.div
-                    key={item.title}
-                    whileHover={{ y: -8 }}
-                    className="rounded-2xl border border-[#C79A2B]/20 bg-white/5 p-8 backdrop-blur-sm"
-                  >
-
-                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#C79A2B]">
-
-                      <Icon size={30} className="text-white" />
-
-                    </div>
-
-                    <h4 className="text-xl font-bold uppercase text-white">
-                      {item.title}
-                    </h4>
-
-                    <p className="mt-4 leading-7 text-gray-300">
-                      {item.text}
-                    </p>
-
-                    <ArrowRight className="mt-6 text-[#C79A2B]" />
-
-                  </motion.div>
-
-                );
-
-              })}
-
-            </div>
-
-          </div>
-
-          {/* WHY FOUNDATIONS PARTNER */}
-
-          <div className="bg-white px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <Landmark
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
-
-              <h3 className="mt-8 text-4xl font-black uppercase text-[#061C3F]">
-                Why Foundations Partner With RHDI
-              </h3>
-
-              <div className="mx-auto mt-5 h-1 w-28 bg-[#C79A2B]" />
-
-              <p className="mt-10 text-lg leading-9 text-gray-700">
-
-                Our foundation partners support programs that respond
-                to real community needs while promoting leadership,
-                education, technology access, and sustainable
-                development. Through transparent governance,
-                accountability, measurable outcomes, and strategic
-                collaboration, every investment contributes to lasting
-                transformation that extends across communities,
-                generations, and nations.
-
+              <p className="mt-8 text-2xl font-semibold leading-10">
+                Together, we can invest in purpose, transform lives, and create
+                lasting impact for generations to come.
               </p>
 
-            </div>
+              <div className="my-10 h-px bg-white/10" />
 
-          </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <HeartHandshake className="mb-5 h-10 w-10 text-[#C79A2B]" />
 
-          {/* PARTNERSHIP STATEMENT */}
-
-          <div className="bg-[#F8F8F8] px-8 py-20">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-              <Quote
-                size={70}
-                className="mx-auto text-[#C79A2B]"
-              />
-
-              <blockquote className="mt-10 text-2xl italic font-semibold leading-10 text-[#061C3F]">
-
-                "Together, we can invest in purpose, transform lives,
-                strengthen communities, and create lasting impact for
-                generations to come."
-
-              </blockquote>
-
-              <div className="mt-14">
-
-                <h3 className="text-3xl font-black text-[#061C3F]">
+                <h3 className="text-3xl font-bold">
                   Rehoboth Discipleship International (RHDI)
                 </h3>
 
-                <h4 className="mt-4 text-2xl font-bold text-[#C79A2B]">
-                  Equipping Leaders. Empowering Communities.
-                  Transforming Nations.
-                </h4>
-
+                <p className="mt-5 text-xl leading-9 text-gray-200">
+                  Equipping Leaders. Empowering Communities. Transforming
+                  Nations.
+                </p>
               </div>
-
             </div>
+          </motion.section>
 
-          </div>
-
-        </motion.div>
-
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }
