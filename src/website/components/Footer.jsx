@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Facebook,
@@ -59,6 +59,46 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const handleSubscribe = async () => {
+    if (!email.trim()) {
+      setMessage("Please enter your email address.");
+      return;
+    }
+  
+    try {
+      setLoading(true);
+      setMessage("");
+  
+      const response = await fetch(
+        "https://rhdi.world/api/newsletter.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      );
+  
+      const data = await response.json();
+
+      if (!data.success) {
+          throw new Error(data.message);
+      }
+
+      setMessage(data.message);
+      setEmail("");
+      setEmail("");
+    } catch (err) {
+      console.error(err);
+      setMessage(err.message || "Subscription failed.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <footer className="bg-[#041B35] text-white">
       <div className="max-w-[1700px] mx-auto">
@@ -157,7 +197,7 @@ export default function Footer() {
 
             <li>
               <Link
-                to="/documents/policies-governance"
+                to="/terms-and-conditions"
                 className="hover:text-[#D4A52A] transition duration-300"
               >
                 Terms & Conditions
@@ -234,19 +274,30 @@ export default function Footer() {
 
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               className="w-full h-14 rounded-xl border border-white/15 bg-white/10 px-5 outline-none placeholder:text-gray-400"
             />
 
             <button
-              type="submit"
-              className="w-full mt-4 h-14 rounded-xl bg-[#C89A26] hover:bg-[#D4A52A] text-[#041B35] font-bold transition">
-              Subscribe Now
+              type="button"
+              onClick={handleSubscribe}
+              disabled={loading}
+              className="w-full mt-4 h-14 rounded-xl bg-[#C89A26] hover:bg-[#D4A52A] text-[#041B35] font-bold transition disabled:opacity-60"
+            >
+              {loading ? "Subscribing..." : "Subscribe Now"}
             </button>
 
             <p className="text-sm text-gray-400 mt-4">
               We respect your privacy. Unsubscribe anytime.
             </p>
+
+            {message && (
+              <p className="mt-3 text-sm text-green-400">
+                {message}
+              </p>
+            )}
 
             <h4 className="text-2xl font-bold mt-12 mb-6">
               Connect With Us

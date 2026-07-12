@@ -92,6 +92,8 @@ import Contact from '../pages/Contact.jsx';
 import BecomeAVolunteer from '../pages/BecomeAVolunteer.jsx';
 import Blogs from '../pages/Blogs.jsx';
 
+import TermsAndConditions from "../pages/TermsAndConditions.jsx";
+
 // Import blog detail components
 import DiscipleshipBooksIndia from '../pages/blog/DiscipleshipBooksIndia.jsx';
 import FellowshipGatheringLucknow from '../pages/blog/FellowshipGatheringLucknow.jsx';
@@ -148,6 +150,12 @@ const PublicRoutes = (
     path="/about/president"
     element={<President />}
     />
+
+    <Route
+      path="/terms-and-conditions"
+      element={<TermsAndConditions />}
+    />
+
     <Route path="/about/discipleship" element={<Discipleship />} />
     <Route path="/about/homeless" element={<SeeThoseWhoNeedYourHelp />} />
     <Route path="/about/construction" element={<ConstructionOfWorshipBuildings />} />
