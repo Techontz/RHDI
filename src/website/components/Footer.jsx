@@ -54,7 +54,7 @@ const socialLinks = [
     icon: Youtube,
     name: "YouTube",
     color: "hover:bg-red-600",
-    url: "#",
+    url: "https://www.youtube.com/@timesofrestoration",
   },
 ];
 
