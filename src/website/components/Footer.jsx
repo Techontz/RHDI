@@ -36,7 +36,7 @@ const socialLinks = [
     icon: Linkedin,
     name: "LinkedIn",
     color: "hover:bg-blue-700",
-    url: "https://linkedin.com/company/rhdiworld",
+    url: "https://www.linkedin.com/in/dr-daniel-k-boniface-58199b147",
   },
   {
     icon: MessageCircle,
