@@ -13,7 +13,7 @@ import {
 const stats = [
   {
     icon: Globe,
-    value: 7,
+    value: 20,
     suffix: "",
     title: "Countries",
     subtitle: "Served",
@@ -28,7 +28,7 @@ const stats = [
   },
   {
     icon: Monitor,
-    value: 58,
+    value: 392,
     suffix: "+",
     title: "Zoom Seminars",
     subtitle: "Conducted",
@@ -36,7 +36,7 @@ const stats = [
   },
   {
     icon: UserCheck,
-    value: 19,
+    value: 283,
     suffix: "+",
     title: "Physical Seminars",
     subtitle: "Conducted",
