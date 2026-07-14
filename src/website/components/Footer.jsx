@@ -111,9 +111,7 @@ export default function Footer() {
             </h3>
 
             <p className="text-gray-300 leading-8">
-              Rehoboth Discipleship International is an international team
-              ministry dedicated to equipping Discipleship (perfecting) the
-              saints to function fully and freely in the body of Christ.
+            Rehoboth Discipleship International (RHDI) is a faith-based, community-focused international nonprofit organization dedicated to empowering individuals, developing leaders, strengthening communities, and expanding opportunities through discipleship, education, leadership development, digital empowerment, and humanitarian service.
             </p>
 
             <Link
