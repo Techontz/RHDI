@@ -12,7 +12,7 @@ const BooksSection = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch("https://rhdi.world/api/books.php");
+        const response = await fetch("https://api.rhdi.world/books.php");
         const result = await response.json();
 
         if (result.success) {

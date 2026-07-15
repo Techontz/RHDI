@@ -14,7 +14,7 @@ const Books = () => {
     const fetchBooks = async () => {
       try {
         setLoading(true);
-        const response = await fetch("https://rhdi.world/api/books.php");
+        const response = await fetch("https://api.rhdi.world/books.php");
         const result = await response.json();
         console.log(result);
         
