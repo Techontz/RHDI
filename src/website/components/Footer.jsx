@@ -73,7 +73,7 @@ export default function Footer() {
       setMessage("");
   
       const response = await fetch(
-        "https://rhdi.world/api/newsletter.php",
+        "https://api.rhdi.world/newsletter.php",
         {
           method: "POST",
           headers: {
@@ -111,7 +111,7 @@ export default function Footer() {
             </h3>
 
             <p className="text-gray-300 leading-8">
-            Rehoboth Discipleship International (RHDI) is a faith-based, community-focused international nonprofit organization dedicated to empowering individuals, developing leaders, strengthening communities, and expanding opportunities through discipleship, education, leadership development, digital empowerment, and humanitarian service.
+            Rehoboth Discipleship International (RHDI) is a global Christian nonprofit organization committed to equipping leaders, empowering communities, and transforming nations through discipleship, education, leadership development, humanitarian service, digital empowerment, and strategic partnerships. We work alongside churches, communities, institutions, and partners to foster sustainable growth, strengthen biblical values, and create lasting impact across the world.
             </p>
 
             <Link

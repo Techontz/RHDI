@@ -18,7 +18,7 @@ const BookDetail = () => {
       try {
         setLoading(true);
         const response = await fetch(
-        `https://rhdi.world/api/books.php?id=${id}`
+          `https://api.rhdi.world/books.php?id=${id}`
         );
         const result = await response.json();
         console.log(result);
@@ -44,11 +44,7 @@ const BookDetail = () => {
   const getBookCover = (book) => {
     if (!book?.cover_image) return null;
   
-    if (book.cover_image.startsWith("http")) {
-      return book.cover_image;
-    }
-  
-    return `https://rhdi.world${book.cover_image}`;
+    return book.cover_image;
   };
 
   const handleAddToCart = () => {
@@ -239,10 +235,16 @@ const BookDetail = () => {
                   </p>
                   <p className="text-gray-600">
                     <span className="font-medium">Status:</span>{' '}
-                    <span className={book.is_active ? 'text-green-600' : 'text-red-600'}>
-                    Number(book.is_active) === 1
-                      ? "Available"
-                      : "Unavailable"
+                    <span
+                      className={
+                        Number(book.is_active) === 1
+                          ? "text-green-600"
+                          : "text-red-600"
+                      }
+                    >
+                      {Number(book.is_active) === 1
+                        ? "Available"
+                        : "Unavailable"}
                     </span>
                   </p>
                   <p className="text-gray-600">

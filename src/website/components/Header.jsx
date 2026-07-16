@@ -225,11 +225,15 @@ const menuItems = [
 ];
 
 export default function Header() {
+
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const { cartItems, getTotalItems } = useCart();
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const [lockedSubMenu, setLockedSubMenu] = useState(null);
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const { cartItems, getTotalItems } = useCart();
+
+  const [openMobileMenu, setOpenMobileMenu] = useState(null);
+  const [openMobileSubMenu, setOpenMobileSubMenu] = useState(null);
 
   const submenuRef = useRef(null);
 
@@ -517,42 +521,182 @@ export default function Header() {
     {/* Mobile Menu */}
     {mobileMenu && (
       <div className="xl:hidden bg-[#001a3d] border-t border-white/10">
-        <div className="px-6 py-4">
-          {menuItems.map((item, index) => (
-            <div key={index} className="py-3">
-              <div className="text-white text-sm font-medium uppercase">
-                {item.title}
-              </div>
 
-              {item.children && (
-                <div className="ml-4 mt-2 space-y-2">
-                  {item.children.map((child, childIndex) => (
-                  <Link
-                    key={childIndex}
-                    to={child.path}
-                    onClick={() => setMobileMenu(false)}
-                    className="block text-gray-300 text-xs py-2 hover:text-[#d4a017]"
+        <div
+          className="
+            h-[calc(100vh-64px)]
+            overflow-y-auto
+            px-5
+            py-4
+          "
+        >
+          {menuItems.map((item, index) => (
+            <div
+              key={index}
+              className="border-b border-white/10"
+            >
+              {/* Main Category */}
+              {item.children ? (
+                <>
+                  <button
+                    onClick={() =>
+                      setOpenMobileMenu(
+                        openMobileMenu === index ? null : index
+                      )
+                    }
+                    className="
+                      w-full
+                      flex
+                      items-center
+                      justify-between
+                      py-4
+                      text-left
+                      text-white
+                      font-semibold
+                      uppercase
+                      text-sm
+                    "
                   >
-                    {child.title}
-                  </Link>
-                ))}
-                </div>
+                    {item.title}
+
+                    <ChevronDown
+                      size={18}
+                      className={`transition-transform duration-300 ${
+                        openMobileMenu === index
+                          ? "rotate-180"
+                          : ""
+                      }`}
+                    />
+                  </button>
+
+                  {openMobileMenu === index && (
+                    <div className="pb-3 pl-4 space-y-1">
+
+                      {item.children.map((child, childIndex) => {
+
+                        const key = `${index}-${childIndex}`;
+
+                        return child.children ? (
+                          <div key={key}>
+
+                            <button
+                              onClick={() =>
+                                setOpenMobileSubMenu(
+                                  openMobileSubMenu === key
+                                    ? null
+                                    : key
+                                )
+                              }
+                              className="
+                                w-full
+                                flex
+                                justify-between
+                                items-center
+                                py-3
+                                text-gray-300
+                                text-sm
+                              "
+                            >
+                              {child.title}
+
+                              <ChevronDown
+                                size={16}
+                                className={`transition-transform duration-300 ${
+                                  openMobileSubMenu === key
+                                    ? "rotate-180"
+                                    : ""
+                                }`}
+                              />
+                            </button>
+
+                            {openMobileSubMenu === key && (
+                              <div className="ml-4 border-l border-white/10 pl-4">
+
+                                {child.children.map(
+                                  (subChild, subIndex) => (
+                                    <Link
+                                      key={subIndex}
+                                      to={subChild.path}
+                                      onClick={() =>
+                                        setMobileMenu(false)
+                                      }
+                                      className="
+                                        block
+                                        py-2
+                                        text-gray-400
+                                        text-sm
+                                        hover:text-[#d4a017]
+                                      "
+                                    >
+                                      {subChild.title}
+                                    </Link>
+                                  )
+                                )}
+
+                              </div>
+                            )}
+
+                          </div>
+                        ) : (
+                          <Link
+                            key={key}
+                            to={child.path}
+                            onClick={() =>
+                              setMobileMenu(false)
+                            }
+                            className="
+                              block
+                              py-3
+                              text-gray-300
+                              text-sm
+                              hover:text-[#d4a017]
+                            "
+                          >
+                            {child.title}
+                          </Link>
+                        );
+                      })}
+
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link
+                  to={item.path}
+                  onClick={() => setMobileMenu(false)}
+                  className="
+                    flex
+                    items-center
+                    justify-between
+                    py-4
+                    text-white
+                    font-semibold
+                    uppercase
+                    text-sm
+                  "
+                >
+                  {item.title}
+                </Link>
               )}
             </div>
           ))}
 
+          {/* Donate Button */}
           <Link
             to="/donate"
+            onClick={() => setMobileMenu(false)}
             className="
-              mt-4
+              mt-6
+              mb-8
               flex
               justify-center
+              items-center
               bg-[#d4a017]
               text-black
               font-bold
-              text-xs
               py-3
               rounded-md
+              text-sm
             "
           >
             DONATE

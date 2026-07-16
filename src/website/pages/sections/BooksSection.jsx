@@ -30,8 +30,9 @@ const BooksSection = () => {
   }, []);
 
   const getBookCover = (book) => {
-    if (!book.cover_image) return null;
-    return `https://rhdi.world${book.cover_image}`;
+    if (!book?.cover_image) return null;
+  
+    return book.cover_image;
   };
 
   return (

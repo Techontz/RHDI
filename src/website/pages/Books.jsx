@@ -51,13 +51,9 @@ const Books = () => {
 
   // Helper function to get cover image or placeholder
   const getBookCover = (book) => {
-    if (!book.cover_image) return null;
-
-    if (book.cover_image.startsWith("http")) {
-        return book.cover_image;
-    }
-
-    return `https://rhdi.world${book.cover_image}`;
+    if (!book?.cover_image) return null;
+  
+    return book.cover_image;
   };
 
   return (
